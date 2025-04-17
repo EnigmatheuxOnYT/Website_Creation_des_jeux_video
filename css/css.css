@@ -1,0 +1,421 @@
+/* Variables de style */
+:root {
+    --bg-color: #ffffff;
+    --surface-color: #ebfaf3;
+    --primary-color: #5ca884;
+    --secondary-color: #2a8c5e;
+    --accent-color: #27a067;
+    --text-color: #000000;
+    --font-family: 'Roboto', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général du corps */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    cursor: url('images/curseur-pixel-art.png'), auto;
+    transition: background var(--transition-speed) ease-in-out;
+}
+
+/* Header et navigation */
+header {
+    background: var(--surface-color);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all var(--transition-speed) ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    position: relative;
+}
+
+
+section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Blockquotes */
+blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: var(--surface-color);
+    border-left: 5px solid var(--primary-color);
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* Boutons et formulaires */
+button, input[type="submit"] {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+button:hover, input[type="submit"]:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: var(--surface-color);
+    color: var(--text-color);
+    transition: border-color var(--transition-speed) ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background: var(--surface-color);
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid var(--primary-color);
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Transitions supplémentaires pour les liens */
+a {
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+a:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Conteneur général */
+.frame {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--surface-color);
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+}
+
+/* Vidéo rétro */
+.video-container {
+    max-width: 640px;
+    margin: 0 auto 20px;
+}
+
+.video-container video {
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Slider d’images vintage */
+.image-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.image-slider img {
+    width: 200px;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.image-slider img:hover {
+    transform: scale(1.05);
+}
+
+/* Timeline animée */
+.timeline {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.timeline-event {
+    position: relative;
+    padding: 10px 15px;
+    background: var(--surface-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.timeline-event:hover {
+    transform: scale(1.1);
+    background-color: #c0f8de;
+    /* Note : Pour intégrer un bruitage 8-bit sur hover, il faudra ajouter du JavaScript */
+}
+
+/*Deuxième style pour le 2ème niveau de citations, plus claires*/
+.blockquote2 {
+    font-style: italic;
+    background: #c7e8d8;
+    padding: 15px 20px;
+    border-left: 5px solid var(--primary-color);
+    margin-top: 20px;
+}
+
+.timeline {
+    position: relative;
+    margin: 60px 0;
+    height: 120px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--accent-color);
+    transform: translateY(-50%);
+}
+
+.timeline-event {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: popIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.timeline-event .year {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.timeline-event .label {
+    font-size: 0.95rem;
+    background: #333;
+    padding: 4px 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.485);
+}
+
+@keyframes popIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Tableau moderne et responsive */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ebfaf3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #000000;
+}
+
+.modern-table th, .modern-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #27a067;
+}
+
+.modern-table thead {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.modern-table tbody tr:hover {
+    background-color: #bfe2d0;
+    transition: background-color var(--transition-speed);
+}
+
+@media (max-width: 600px) {
+    .modern-table th, .modern-table td {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Section des sources */
+.source-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.source-item {
+    background: var(--surface-color);
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.source-item a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.source-item a:hover {
+    color: var(--secondary-color);
+}
+
+.source-item i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.source-item p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+.source-item:hover {
+    transform: translateY(-5px);
+    background-color: #c0f8de;
+}
+
+.little-text{
+    color: #5ca884;
+    font-size:0.9rem
+}
