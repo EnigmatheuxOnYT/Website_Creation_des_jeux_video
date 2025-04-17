@@ -19,13 +19,28 @@
   
   /* Style général du corps */
   body {
-    background: var(--bg-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
     line-height: 1.6;
-    cursor: url('images/curseur-pixel-art.png'), auto;
     transition: background var(--transition-speed) ease-in-out;
+  
+    /* Fond quadrillage smooth */
+    background-image: 
+      linear-gradient(
+        to right,
+        rgba(92, 168, 132, 0.09) 1px, 
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(92, 168, 132, 0.09) 1px, 
+        transparent 1px
+      );
+    background-size: 40px 40px;
+    background-repeat: repeat;
   }
+  
   
   /* Header et navigation */
   header {
@@ -119,7 +134,97 @@
     margin-bottom: 15px;
     color: var(--text-color);
   }
+
+  /* Section sources */
+  section#sources {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    animation: slideIn 0.5s ease-in-out;
+    background: #f5f1fb;
+    border-radius: 12px;
+    border: 2.5px solid #7256b6;
+    box-shadow:
+      #7256b668 5px 5px,
+      #915deb79 10px 10px,
+      #915deb3d 15px 15px,
+      #a27ae727 20px 20px; 
+  }
   
+  section#sources h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #885cd6;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  section#sources h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #7256b6 70%, #8eb6fa);
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  section#sources p,
+  section#sources .source-description {
+    font-size: 1.08rem;
+    margin-bottom: 15px;
+    color: #483b66;
+  }
+  
+  section#sources .source-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  section#sources .source-item {
+    background: #ede8fa;
+    padding: 20px;
+    border: 1px solid #cabffd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #7256b622;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  section#sources .source-item:hover {
+    background: #dcd5f7;
+    box-shadow: 0 4px 16px #8eb6fa44;
+    transform: translateY(-5px);
+  }
+  
+  section#sources .source-item a {
+    color: #7256b6;
+    text-decoration: none;
+    font-size: 1.08rem;
+    transform: translateY(-5px);
+  }
+  
+  section#sources .source-item a:hover {
+    color: #483b66;
+    transform: translateY(-5px);
+  }
+  
+  section#sources .source-category h3 {
+    color: #593a7a;
+    margin-bottom: 0.5em;
+  }
+  
+  section#sources .source-category i {
+    color: #aa86df;
+  }
+
+ 
+
   /* Blockquotes */
   blockquote {
     margin: 20px 0;
@@ -146,10 +251,7 @@
     #27a06719 7px 7px,
     #2a8c5e14 10px 10px;
 }
-  
-  
-  
-  
+
   /* Boutons et formulaires standards */
   button, input[type="submit"] {
     background: var(--primary-color);
@@ -383,47 +485,6 @@
       padding: 12px;
       font-size: 0.9rem;
     }
-  }
-  
-  /* Section des sources */
-  .source-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  .source-item {
-    background: var(--surface-color);
-    padding: 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.09);
-    transition: transform var(--transition-speed), background-color var(--transition-speed);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .source-item a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-  }
-  .source-item a:hover {
-    color: var(--secondary-color);
-  }
-  .source-item i {
-    margin-right: 10px;
-    font-size: 1.3rem;
-  }
-  .source-item p {
-    font-size: 0.9rem;
-    margin-top: 10px;
-    color: var(--text-color);
-  }
-  .source-item:hover {
-    transform: translateY(-5px);
-    background-color: #c0f8de;
   }
   
   /* Petits textes */
