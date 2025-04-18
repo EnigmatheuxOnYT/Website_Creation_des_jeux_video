@@ -91,9 +91,6 @@
     transform: translateY(-3px) scale(1.05);
   }
 
-  
-
-  
   /* Sections */
   section {
     padding: 40px 20px;
@@ -109,7 +106,6 @@
     #2a8c5e2e 15px 15px,
     #96dcb921 20px 20px;
 }
-  
   
   section h2 {
     font-size: 2rem;
@@ -380,64 +376,137 @@
   }
   
   /* Timeline */
-  .timeline {
+  .vertical-timeline {
     position: relative;
-    margin: 60px 0;
-    height: 120px;
+    margin: 40px auto;
+    padding-left: 36px;
+    max-width: 700px;
   }
-  .timeline-line {
+  
+  .vtimeline-line {
     position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: var(--accent-color);
-    transform: translateY(-50%);
+    top: 0;
+    left: 20px;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+    z-index: 0;
   }
-  .timeline-event {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    animation: popIn 0.6s ease forwards;
-    opacity: 0;
+  
+  .vtimeline-event {
+    position: relative;
+    margin-bottom: 38px;
+    min-height: 60px;
+    display: flex;
+    align-items: flex-start;
+    animation: fadeInUp 0.7s cubic-bezier(.4,1.4,.7,1) both;
+  }
+  
+  .vtimeline-dot {
+    width: 20px;
+    height: 20px;
     background: var(--surface-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    padding: 10px 15px;
-    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    border: 3px solid var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    left: -23px;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 8px #2a8c5e22;
+    transition: background 0.2s, border-color 0.2s;
   }
-  .timeline-event:hover {
-    transform: scale(1.1) translate(-50%, -50%);
-    background-color: #c0f8de;
+  
+  .vtimeline-event:hover .vtimeline-dot {
+    background: var(--accent-color);
+    border-color: var(--primary-color);
   }
-  .timeline-event .year {
+  
+  .vtimeline-date {
+    min-width: 80px;
+    margin-left: 30px;
+    margin-top: 0px;
     font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1.18rem;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px 0 #e3f6ed;
+    flex-shrink: 0;
   }
-  .timeline-event .label {
-    font-size: 0.95rem;
-    background: #333;
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 8px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  
+  .vtimeline-content {
+    background: var(--surface-color);
+    border: 1.5px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-left: 20px;
+    box-shadow: 0 2px 8px #27a06711;
+    flex: 1 1 0;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    position: relative;
   }
+  
+  .vtimeline-event:hover .vtimeline-content {
+    transform: scale(1.05) translateY(-2px);
+    border-color: var(--accent-color);
+    box-shadow:
+    #5ca88459 3px 3px,
+    #27a06747 8px 8px,
+    #2a8c5e2e 13px 13px,
+    #96dcb921 18px 18px;
+  }
+  
+  .vtimeline-content strong {
+    color: var(--secondary-color);
+    font-size: 1.08rem;
+  }
+  
+  .vtimeline-content p {
+    margin: 6px 0 0 0;
+    color: var(--text-color);
+    font-size: 1.01rem;
+  }
+  
+  @media (max-width: 600px) {
+    .vertical-timeline {
+      padding-left: 20px;
+    }
+    .vtimeline-date {
+      font-size: 1rem;
+      min-width: 60px;
+    }
+    .vtimeline-content {
+      padding: 10px 10px;
+      font-size: 0.97rem;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   
   /* Tableau moderne et responsive */
   .table-container {
     overflow-x: auto;
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px #00000010;
+    box-shadow:
+    #5ca88421 4px 4px,
+    #27a06719 7px 7px,
+    #2a8c5e14 10px 10px;
   }
   .modern-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #ebfaf3;
+    background-color: #caf3df;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px #00000008;
@@ -452,7 +521,7 @@
     color: var(--bg-color);
   }
   .modern-table tbody tr:hover {
-    background-color: #bfe2d0;
+    background-color: rgba(154, 219, 187, 0.747);
     transition: background-color var(--transition-speed);
   }
   @media (max-width: 600px) {
