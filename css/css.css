@@ -41,7 +41,7 @@
   }
   
   
-  /* Header et navigation */
+  /* Header et navigation */  
   header {
     background: var(--surface-color);
     padding: 20px;
@@ -90,6 +90,9 @@
     background: #d6f7e7;
     transform: translateY(-3px) scale(1.05);
   }
+
+  
+
   
   /* Sections */
   section {

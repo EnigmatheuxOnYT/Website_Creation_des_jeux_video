@@ -10,7 +10,7 @@
 
     <header>
         <h1><i class="fa-solid fa-lightbulb"></i> Comment naît un jeu vidéo ?</h1>
-        <p>Plongée dans les coulisses de la création numérique</p>
+        <p>La cuisine du studio, des premières idées aux nuits blanches de debug</p>
         <nav>
             <ul>
                 <li><a href="index.html" title="Accueil"><i class="fa-solid fa-house"></i></a></li>
@@ -25,91 +25,221 @@
 
     <section id="intro">
         <h2><i class="fa-solid fa-brain"></i> Petit rappel</h2>
-        <img src="images/game_dev_team.jpg" alt="Équipe de développement de jeu vidéo" style="max-width: 60%; border-radius: 12px; margin: 1rem 0;">
         <p>
-            La création d'un jeu vidéo moderne mobilise en moyenne <strong>50 à 200 professionnels</strong> pendant 3 à 5 ans, avec des budgets dépassant parfois les 100 millions de dollars[4][7]. Derrière chaque personnage qui saute à l'écran se cachent des années de travail collaboratif et d'innovations technologiques.
+            Avant d’avoir un Mario qui saute ou un Creeper qui explose dans ton écran, il y a tout un process (parfois épique) derrière. 
+            Non, un jeu ne sort pas d’un micro-ondes “réchauffe-moi un AAA”. Découvre ici toutes les grandes étapes, les métiers, les outils, et les secrets de la création d’un jeu vidéo moderne.
         </p>
         <blockquote>
-            "Un jeu vidéo, c'est 10% d'inspiration et 90% de transpiration algorithmique"<br>
-            <em>- Un développeur anonyme de CD Projekt Red</em>
+            "Un jeu vidéo, c’est comme un iceberg : 10% visible, 90% de boulot en coulisses."
         </blockquote>
     </section>
 
     <section id="idee">
         <h2>1. L’idée – Le déclic créatif</h2>
-        <div class="frame">
-            <p>Le processus commence par un <strong>Game Concept Document</strong> (GCD), un document de 10 à 50 pages qui structure la vision créative[4][8] :</p>
-            
-            <ul style="columns: 2; margin: 1rem 0;">
-                <li>Genre et mécaniques de base</li>
-                <li>Public cible (casual gamers, hardcore players)</li>
-                <li>Plateformes ciblées (PC, console, mobile)</li>
-                <li>Business model (abonnement, free-to-play)</li>
-                <li>Inspirations et différentiateurs</li>
-                <li>Équipe nécessaire et budget estimé</li>
-                <li>Calendrier prévisionnel</li>
-                <li>Analyse de marché</li>
-            </ul>
-
-            <h3>Exemples marquants :</h3>
-            <div class="case-study">
-                <h4><i class="fa-solid fa-chess"></i> The Legend of Zelda: Breath of the Wild</h4>
-                <p>GCD initial : "Recréer l'émerveillement de l'exploration enfantine" avec physique réaliste et monde ouvert non-linéaire</p>
-                
-                <h4><i class="fa-solid fa-dragon"></i> Among Us</h4>
-                <p>Concept originel (2018) : Adaptation numérique du jeu de société "Loups-garous" dans l'espace, développé par 3 personnes</p>
-            </div>
-
-            <blockquote class="blockquote2">
-                "Notre GCD pour Red Dead Redemption 2 tenait dans un tableur Excel de 10 000 lignes. Chaque cellule était un élément gameplay à valider."<br>
-                <em>- Rob Nelson, Rockstar Games</em>
-            </blockquote>
-        </div>
+        <p>Tout commence par une idée. Mais une vraie ! Pas juste “et si on faisait un jeu où tu tapes des bananes” (quoique...)</p>
+        <ul>
+            <li>Un gameplay original ?</li>
+            <li>Un univers visuel stylé ?</li>
+            <li>Une histoire qui accroche ?</li>
+            <li>Une mécanique jamais vue ?</li>
+        </ul>
+        <p>Exemple : <em>Undertale</em> → "Et si on pouvait finir un RPG sans tuer personne ?"</p>
+        <p>À ce stade, on prépare un <strong>Game Concept Document (GCD)</strong> :</p>
+        <ul>
+            <li>Résumé de l’idée</li>
+            <li>Plateforme cible (PC, console, mobile...)</li>
+            <li>Ambiance et inspirations (films, jeux, livres...)</li>
+            <li>Pitch rapide (pour investisseurs, éditeurs, ou juste convaincre les potes)</li>
+            <li>Public visé (âge, style de joueur)</li>
+            <li>Analyse de la concurrence</li>
+            <li>Premiers croquis ou moodboards</li>
+        </ul>
+        <blockquote>
+            <strong>Le savais-tu ?</strong> Beaucoup de jeux cultes sont nés lors de <em>game jams</em> (concours de création en 48h). <em>Celeste</em> ou <em>Superhot</em> en sont issus !
+        </blockquote>
     </section>
 
     <section id="gamedesign">
         <h2>2. Game Design – L’architecture du fun</h2>
-        <div class="frame">
-            <p>Le game designer orchestre une alchimie complexe entre :</p>
-            
-            <div class="design-pillars">
-                <div class="pillar">
-                    <h3><i class="fa-solid fa-puzzle-piece"></i> Mécaniques de base</h3>
-                    <ul>
-                        <li>Système de mouvement (double saut, accroupissement)</li>
-                        <li>Gestion des collisions et physique</li>
-                        <li>Boucles de gameplay (combat, exploration, craft)</li>
-                    </ul>
+        <p>Le game designer est le chef d’orchestre du gameplay. Il transforme l’idée brute en expérience jouable.</p>
+        <ul>
+            <li>Définit les règles du jeu (objectifs, conditions de victoire/défaite...)</li>
+            <li>Conçoit les mécaniques (saut, combat, dialogue, craft...)</li>
+            <li>Équilibre la difficulté, le rythme, la progression</li>
+            <li>Crée des prototypes (papier, numérique, moteurs comme Unity/Godot)</li>
+            <li>Imagine les niveaux, les puzzles, les ennemis</li>
+        </ul>
+        <p>Outils utilisés : <strong>Miro, Figma, Notion, Excel, Twine (pour les jeux narratifs)</strong></p>
+        <blockquote>
+            “Peut-on double-sauter ? Meurt-on en un coup ? Le niveau 1 a-t-il un mini-boss ?”<br>
+            <em>Le game designer, tous les matins</em>
+        </blockquote>
+        <p>
+            <strong>Exemple :</strong> <em>Celeste</em> : chaque écran est testé pour être difficile mais jamais injuste. Le level design est affiné par des centaines d’itérations.
+        </p>
+    </section>
+
+    <section id="direction-artistique">
+        <h2>3. Direction artistique – Le style graphique et sonore</h2>
+        <p>Le jeu, il ressemble à quoi ? Il sonne comment ? C’est là qu’on décide :</p>
+        <ul>
+            <li>Style graphique : réaliste, cartoon, pixel art, low poly, peinture numérique...</li>
+            <li>Angle de caméra : 2D ? 3D ? Vue subjective ? Isométrique ?</li>
+            <li>Palette de couleurs et ambiance lumineuse</li>
+            <li>Musique et sons : chiptune, orchestre, électro, bruitages réalistes...</li>
+            <li>Animation : fluidité, exagération, motion capture ou dessin à la main</li>
+        </ul>
+        <p>
+            <strong>Métiers impliqués :</strong> graphistes 2D/3D, character designers, animateurs, sound designers, compositeurs, technical artists.
+        </p>
+        <blockquote>
+            “Un bon jeu moche, c’est chaud à vendre. Un jeu beau sans gameplay, c’est un PowerPoint animé.”
+        </blockquote>
+        <p>
+            <strong>Exemple :</strong> <em>Hollow Knight</em> : chaque décor est peint à la main, chaque son est enregistré maison pour renforcer l’immersion.
+        </p>
+    </section>
+
+    <section id="dev">
+        <h2>4. Développement – Le code, les moteurs, les nerfs</h2>
+        <p>Les devs entrent en scène : clavier + sueur + café = magie (parfois).</p>
+        <ul>
+            <li>Choix du moteur : Unity (polyvalent), Unreal Engine (graphismes AAA), Godot (open source), GameMaker (2D), Construct, RPG Maker...</li>
+            <li>Programmation des mécaniques, IA, interfaces, menus, sauvegardes, etc.</li>
+            <li>Intégration des assets graphiques, sons, animations</li>
+            <li>Optimisation (fluidité, temps de chargement, compatibilité multi-plateformes)</li>
+            <li>Gestion du multijoueur, du réseau, des serveurs (pour les jeux online)</li>
+            <li>Utilisation de systèmes de versionning : Git, Perforce, SVN</li>
+        </ul>
+        <p>
+            <strong>Langages utilisés :</strong> C#, C++, Python, GDScript, Lua, JavaScript...
+        </p>
+        <blockquote>
+            “Un bug trouvé à 3h du matin, c’est souvent un point-virgule oublié à 15h.”
+        </blockquote>
+        <p>
+            <strong>Fun fact :</strong> <em>Minecraft</em> a été codé en Java par une seule personne au début (Markus Persson).
+        </p>
+    </section>
+
+    <section id="tests">
+        <h2>5. Tests – Les bugs, le karma et la souffrance</h2>
+        <p>Les testeurs QA passent leur vie à :</p>
+        <ul>
+            <li>Repérer les bugs (les fameux “je suis tombé sous la map”)</li>
+            <li>Mesurer la difficulté et l’équilibrage</li>
+            <li>Vérifier l’accessibilité (daltonisme, options de confort...)</li>
+            <li>Tester toutes les plateformes et configurations</li>
+            <li>Faire des rapports de bugs détaillés (screenshots, vidéos, logs...)</li>
+        </ul>
+        <blockquote>
+            “Parfois, on garde les bugs… parce qu’ils sont drôles.” – Un dev anonyme de Bethesda
+        </blockquote>
+        <p>
+            <strong>Types de tests :</strong> alpha (en interne), bêta (avec des joueurs externes), tests automatisés, playtests publics.
+        </p>
+    </section>
+
+    <section id="lancement">
+        <h2>6. Lancement – Le stress level max</h2>
+        <p>Quand tout est prêt : on lance !</p>
+        <ul>
+            <li>Version “gold” envoyée aux stores (Steam, PlayStation Store, App Store...)</li>
+            <li>Marketing : trailers, réseaux sociaux, salons (E3, Gamescom), démos jouables</li>
+            <li>Gestion de la communauté (Discord, forums, réseaux...)</li>
+            <li>Mises à jour à prévoir (patchs, DLC, extensions, correctifs day one...)</li>
+            <li>Analyse des retours joueurs et de la presse</li>
+        </ul>
+        <p>
+            <strong>Exemples de lancements épiques :</strong> <em>Cyberpunk 2077</em> (bugfest), <em>No Man’s Sky</em> (rédemption par les updates), <em>Elden Ring</em> (succès critique et populaire).
+        </p>
+        <blockquote>
+            “Un lancement sans bug, c’est comme un anniversaire sans gâteau : ça existe, mais c’est rare.”
+        </blockquote>
+    </section>
+
+    <section id="metiers">
+        <h2>Les métiers impliqués dans la création d’un jeu vidéo</h2>
+        <ul>
+            <li><strong>Game Designer</strong> : architecte du gameplay</li>
+            <li><strong>Programmeur</strong> : codeur de l’ombre</li>
+            <li><strong>Graphiste 2D/3D</strong> : créateur des visuels</li>
+            <li><strong>Animateur</strong> : donne vie aux personnages</li>
+            <li><strong>Sound Designer</strong> : bruitages, ambiances</li>
+            <li><strong>Compositeur</strong> : musiques mémorables</li>
+            <li><strong>Technical Artist</strong> : fait le pont entre art et technique</li>
+            <li><strong>QA Tester</strong> : traqueur de bugs</li>
+            <li><strong>Chef de projet/Producer</strong> : organise et planifie</li>
+            <li><strong>Community Manager</strong> : relation avec les joueurs</li>
+            <li><strong>Scénariste</strong> : écrit l’histoire, les dialogues</li>
+            <li><strong>Level Designer</strong> : architecte des niveaux</li>
+            <li><strong>UI/UX Designer</strong> : expérience utilisateur et interfaces</li>
+            <li><strong>Localisation/Traducteur</strong> : adaptation multilingue</li>
+        </ul>
+        <blockquote>
+            “Il faut tout un village pour faire un bon jeu vidéo.”
+        </blockquote>
+    </section>
+
+    <section id="methodes">
+        <h2>Méthodologies et outils de production</h2>
+        <ul>
+            <li><strong>Agile/Scrum</strong> : développement itératif, sprints, réunions quotidiennes</li>
+            <li><strong>Waterfall</strong> (cycle en V) : étapes linéaires, moins flexible</li>
+            <li><strong>Kanban</strong> : gestion visuelle des tâches</li>
+            <li><strong>Gestion de versions</strong> : Git, Perforce, SVN</li>
+            <li><strong>Gestion de projet</strong> : Jira, Trello, Asana, Monday.com</li>
+            <li><strong>Communication</strong> : Slack, Discord, Teams</li>
+        </ul>
+        <p>
+            <strong>Fun fact :</strong> Certains studios AAA ont des équipes de plus de 500 personnes réparties sur plusieurs continents !
+        </p>
+    </section>
+
+    <section id="schema">
+        <div class="bonus-features">
+            <h2>Pour récapituler :</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-event" style="left: 6%">
+                    <span>💡 Idée</span>
                 </div>
-                
-                <div class="pillar">
-                    <h3><i class="fa-solid fa-chart-line"></i> Courbe de difficulté</h3>
-                    <ul>
-                        <li>Progression des compétences joueur</li>
-                        <li>Équilibrage des ennemis/obstacles</li>
-                        <li>Systèmes de récompense</li>
-                    </ul>
+                <div class="timeline-event" style="left: 22%">
+                    <span>🎮 Game Design</span>
+                </div>
+                <div class="timeline-event" style="left: 40%">
+                    <span>🎨 Direction Artistique</span>
+                </div>
+                <div class="timeline-event" style="left: 59%">
+                    <span>🧑‍💻 Développement</span>
+                </div>
+                <div class="timeline-event" style="left: 74%">
+                    <span>🔧 Tests</span>
+                </div>
+                <div class="timeline-event" style="left: 88%">
+                    <span>🚀 Lancement</span>
                 </div>
             </div>
-
-            <h3>Outils professionnels :</h3>
-            <ul class="tools-list">
-                <li><strong>Jira</strong> : Gestion des tâches et suivi des bugs</li>
-                <li><strong>Miro</strong> : Tableaux collaboratifs pour brainstorm</li>
-                <li><strong>Excel</strong> : Équilibrage statistique (DPS, XP curves)</li>
-                <li><strong>Lucidchart</strong> : Diagrammes de flux décisionnels</li>
-            </ul>
-
-            <blockquote class="blockquote2">
-                "Pour Dark Souls, nous voulions que chaque défaite soit une leçon, pas une punition. L'équilibrage a nécessité 6 mois de tests intensifs."<br>
-                <em>- Hidetaka Miyazaki, FromSoftware</em>
-            </blockquote>
+            <blockquote class="blockquote2">“Créer un jeu, c’est comme faire un gâteau : si t’oublies la farine (ou le fun), ça va se sentir.” ~ Ahmed-Adam R.</blockquote>
         </div>
+    </section>
+
+    <section id="bonus">
+        <h2>Bonus interactifs et anecdotes</h2>
+        <ul>
+            <li>Vidéo timelapse de création de jeu (ex: game jam)</li>
+            <li>Infographie ou schéma interactif des étapes</li>
+            <li>GIFs rigolos ou memes de devs (très efficaces)</li>
+            <li>Quiz interactif “Dans quelle phase fait-on quoi ?”</li>
+            <li><strong>Anecdote :</strong> Le premier prototype de <em>Portal</em> a été développé par 7 étudiants en 6 mois avant d’être racheté par Valve !</li>
+            <li><strong>Fun fact :</strong> Le jeu <em>Stardew Valley</em> a été développé par une seule personne (Eric Barone) sur 4 ans.</li>
+            <li><strong>Challenge :</strong> Certains studios organisent des “crunchs” : des semaines de travail de 60h+ pour finir à temps (controversé !)</li>
+            <li><strong>Quiz :</strong> <em>Quel jeu célèbre a été inventé en 48h lors d’une game jam ?</em> <span style="color:var(--accent-color)">Réponse : <strong>Superhot</strong></span></li>
+        </ul>
     </section>
 
     <section id="sources">
         <h2>🥸 Sources pour les plus curieux (et les nerds)</h2>
-    
         <div class="source-categories">
             <!-- Catégorie Vidéos -->
             <div class="source-category">
@@ -126,9 +256,9 @@
                             <i class="fab fa-youtube"></i> Les étapes de création d'un jeu vidéo – Benoît (VideoGameCreation)
                         </a>
                         <h3 class="source-description">Tour d’horizon des étapes principales de création d’un jeu, expliqué par un développeur passionné.</h3>
+                    </div>
                 </div>
             </div>
-    
             <!-- Catégorie Galerie -->
             <div class="source-category">
                 <h3><i class="fas fa-images" style="margin: 1rem 0"></i> Galerie</h3>
@@ -141,7 +271,6 @@
                     </div>
                 </div>
             </div>
-    
             <!-- Catégorie Articles et Ressources -->
             <div class="source-category">
                 <h3><i class="fas fa-book-open" style="margin: 1rem 0"></i> Articles et Ressources</h3>
@@ -215,7 +344,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
 
     <footer>
         <h2>Tu as des questions ou des idées à partager ?</h2>
