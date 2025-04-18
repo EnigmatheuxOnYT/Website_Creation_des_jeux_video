@@ -24,20 +24,19 @@
     font-family: var(--font-family);
     line-height: 1.6;
     transition: background var(--transition-speed) ease-in-out;
-  
-    /* Fond quadrillage smooth */
+
     background-image: 
       linear-gradient(
         to right,
-        rgba(92, 168, 132, 0.09) 1px, 
+        rgba(92, 168, 132, 0.09) 2px, 
         transparent 1px
       ),
       linear-gradient(
         to bottom,
-        rgba(92, 168, 132, 0.09) 1px, 
+        rgba(92, 168, 132, 0.09) 2px, 
         transparent 1px
       );
-    background-size: 40px 40px;
+    background-size: 60px 60px;
     background-repeat: repeat;
   }
   
