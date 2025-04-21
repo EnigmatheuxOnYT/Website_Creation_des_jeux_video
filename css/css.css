@@ -221,18 +221,9 @@
     color: #aa86df;
   }
 
-  /* Blockquotes */
+  /* Citations */
   blockquote {
     margin: 20px 0;
-    padding: 15px 20px;
-    background: var(--surface-color);
-    border-left: 5px solid var(--primary-color);
-    font-style: italic;
-    color: var(--text-color);
-  }
-  
-  /* Deuxième style pour le 2ème niveau de citations, plus claires */
-  .blockquote2 {
     font-style: italic;
     background: #caf3df;
     padding: 15px 20px;
@@ -246,7 +237,7 @@
     #5ca88421 4px 4px,
     #27a06719 7px 7px,
     #2a8c5e14 10px 10px;
-}
+  }
   
   /* Footer */
   footer {
