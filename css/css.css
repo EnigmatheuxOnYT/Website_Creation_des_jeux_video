@@ -40,7 +40,6 @@
     background-repeat: repeat;
   }
   
-  
   /* Header et navigation */  
   header {
     background: var(--surface-color);
@@ -91,6 +90,101 @@
     transform: translateY(-3px) scale(1.05);
   }
 
+  /* Section "Pour rappel" */
+  #reminder {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    animation: slideIn 0.5s ease-in-out;
+    background: #fffbe6;
+    border-radius: 12px;
+    border: 2.5px solid #ffd966;
+    box-shadow:
+      #ffe06644 5px 5px,
+      #ffd6a554 10px 10px,
+      #ffb84d33 15px 15px,
+      #fff2cc2e 20px 20px;
+  }
+
+  #reminder h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e69500;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #reminder h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #e69500;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    border-radius: 2px;
+  }
+
+  #reminder i {
+    color: #e69500;
+    font-size: 1.3em;
+  }
+
+  #reminder ul {
+    margin: 0 0 0 1.2em;
+    padding: 0;
+    list-style: disc inside;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  #reminder li {
+    line-height: 1.6;
+    background: #fffde7;
+    border-radius: 8px;
+    padding: 10px 14px 10px 10px;
+    box-shadow: 0 2px 8px #ffd96633;
+    font-size: 1.08rem;
+    color: #a97a13;
+  }
+
+  #reminder strong {
+    color: #e69500;
+    font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    #reminder {
+      padding: 20px 6px;
+      font-size: 1rem;
+    }
+    #reminder h2 {
+      font-size: 1.18rem;
+    }
+  }
+
+  #reminder blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #fff5c3;
+    border-left: 5px solid #ffd966;
+    font-style: italic;
+    color: #a97a13;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow:
+      #ffe06644 4px 4px,
+      #ffd6a554 7px 7px,
+      #ffb84d33 10px 10px;
+  }
+
   /* Sections */
   section {
     padding: 40px 20px;
@@ -134,7 +228,7 @@
   }
 
   /* Section sources */
-  section#sources {
+  #sources {
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 1200px;
@@ -149,7 +243,7 @@
       #a27ae727 20px 20px; 
   }
   
-  section#sources h2 {
+  #sources h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #885cd6;
@@ -158,7 +252,7 @@
     letter-spacing: -1px;
   }
   
-  section#sources h2::after {
+  #sources h2::after {
     content: '';
     width: 60px;
     height: 4px;
@@ -169,20 +263,20 @@
     border-radius: 2px;
   }
   
-  section#sources p,
-  section#sources .source-description {
+  #sources p,
+  #sources .source-description {
     font-size: 1.08rem;
     margin-bottom: 15px;
     color: #483b66;
   }
   
-  section#sources .source-grid {
+  #sources .source-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
 
-  section#sources .source-item {
+  #sources .source-item {
     background: #ede8fa;
     padding: 20px;
     border: 1px solid #cabffd;
@@ -194,33 +288,33 @@
     align-items: flex-start;
   }
   
-  section#sources .source-item:hover {
+  #sources .source-item:hover {
     background: #dcd5f7;
     box-shadow: 0 4px 16px #8eb6fa44;
     transform: translateY(-5px);
   }
   
-  section#sources .source-item a {
+  #sources .source-item a {
     color: #7256b6;
     text-decoration: none;
     font-size: 1.08rem;
     transform: translateY(-5px);
   }
   
-  section#sources .source-item a:hover {
+  #sources .source-item a:hover {
     color: #483b66;
     transform: translateY(-5px);
   }
   
-  section#sources .source-category h3 {
+  #sources .source-category h3 {
     color: #593a7a;
     margin-bottom: 0.5em;
   }
   
-  section#sources .source-category i {
+  #sources .source-category i {
     color: #aa86df;
   }
-
+  
   /* Citations */
   blockquote {
     margin: 20px 0;
