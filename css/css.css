@@ -253,7 +253,7 @@
     content: '';
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #7256b6 70%, #8eb6fa);
+    background: #7256b6;
     position: absolute;
     bottom: -7px;
     left: 0;
@@ -433,7 +433,10 @@
     height: 480px; /* oblige une hauteur commune à toutes les images */
     border-radius: 12px;
     margin: 1.5rem auto;
-    box-shadow: 0 4px 24px rgba(92, 168, 132, 0.08);
+    box-shadow:
+    #5ca88549 4px 4px,
+    #27a0673b 7px 7px,
+    #2a8c5e14 10px 10px;
     border: 2px solid #2a8c5e;
     object-fit: contain;
     background: #e3f6ed;
