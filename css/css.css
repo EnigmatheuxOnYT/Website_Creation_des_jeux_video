@@ -278,7 +278,6 @@
     padding: 20px;
     border: 1px solid #cabffd;
     border-radius: 8px;
-    box-shadow: 0 4px 6px #7256b622;
     transition: transform var(--transition-speed), background-color var(--transition-speed);
     display: flex;
     flex-direction: column;
@@ -286,8 +285,11 @@
   }
   
   #sources .source-item:hover {
-    background: #dcd5f7;
-    box-shadow: 0 4px 16px #8eb6fa44;
+    background: #e0daf8;
+    box-shadow:
+    #7356b631 0px 5px,
+    #915deb48 0px 10px,
+    #915deb1f 0px 15px;
     transform: translateY(-5px);
   }
   
