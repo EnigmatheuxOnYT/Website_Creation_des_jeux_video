@@ -224,6 +224,343 @@
     color: var(--text-color);
   }
 
+  /* Section "Pour récapituler" */
+  #recap {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    animation: slideIn 0.5s ease-in-out;
+    background: #ddebfa;
+    border-radius: 12px;
+    border: 2.5px solid #7da6d9;
+    box-shadow:
+      #7da6d965 5px 5px,
+      #5c8ddb4f 10px 10px,
+      #5c8ddb31 15px 15px,
+      #b7d1e73d 20px 20px;
+  }
+  
+  #recap h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3f6fa7;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #recap h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #3f6fa7;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  #recap i {
+    color: #3f6fa7;
+    font-size: 1.3em;
+  }
+  
+  #recap strong {
+    color: #3f6fa7;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 600px) {
+    #recap {
+      padding: 20px 6px;
+      font-size: 1rem;
+    }
+    #recap h2 {
+      font-size: 1.18rem;
+    }
+  }
+  
+  #recap blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #f0f6fc;
+    border-left: 5px solid #7da6d9;
+    font-style: italic;
+    color: #3f6fa7;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow:
+      #7da6d93b 4px 4px,
+      #5c8ddb31 7px 7px,
+      #b7d1e73d 10px 10px;
+  }
+  
+  #recap .img-style {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 480px;
+    border-radius: 12px;
+    margin: 1.5rem auto;
+    box-shadow:
+      #7da6d931 4px 4px,
+      #5c8ddb48 7px 7px,
+      #5c8ddb1f 10px 10px;
+    border: 2.5px solid #7da6d9;
+    object-fit: contain;
+    background: #e8f1fa;
+  }
+  
+  #recap .modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f5f8fb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px #b3c7e6cc;
+    font-family: var(--font-family);
+  }
+
+  #recap .modern-table th,
+  #recap .modern-table td {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 1rem;
+      color: #3c4a5b;
+      border-bottom: 1px solid #d3e0ef;
+  }
+
+  #recap .modern-table th {
+      background-color: #7da6d9;
+      color: #ffffff;
+      border-bottom: 2px solid #4f6fa7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+  }
+
+  #recap .modern-table td {
+      border-right: 1px solid #d3e0ef;
+  }
+
+  #recap .modern-table th:last-child,
+  #recap .modern-table td:last-child {
+      border-right: none;
+  }
+
+  #recap .modern-table tbody tr:nth-child(even) {
+      background-color: #eaf1fa;
+  }
+
+  #recap .modern-table tbody tr:nth-child(odd) {
+      background-color: #f5f8fb;
+  }
+
+  #recap .modern-table tbody tr:hover {
+      background-color: #d1e3f6;
+      transform: translateY(-2px);
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+
+  #recap .modern-table tbody tr:last-child td {
+      border-bottom: none;
+  }
+
+  #recap .modern-table tbody tr:last-child td:first-child {
+      border-bottom-left-radius: 12px;
+  }
+
+  #recap .modern-table tbody tr:last-child td:last-child {
+      border-bottom-right-radius: 12px;
+  }
+
+  @media (max-width: 600px) {
+      #recap .modern-table th,
+      #recap .modern-table td {
+          padding: 12px 16px;
+          font-size: 0.85rem;
+      }
+  }
+
+  #recap .timeline {
+    position: relative;
+    margin: 60px 0;
+    height: 120px;
+  }
+
+  #recap .timeline-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #7da6d9 0%, #b9d6f2 100%);
+      transform: translateY(-50%);
+      border-radius: 2px;
+  }
+
+  #recap .timeline-event {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      animation: popIn 0.6s ease forwards;
+      opacity: 0;
+      background: #e8f1fa;
+      border: 1.5px solid #7da6d9;
+      border-radius: 8px;
+      padding: 10px 15px;
+      transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+      box-shadow:
+        #7da6d931 2px 2px,
+        #b9d6f248 4px 4px,
+        #5c8ddb1f 6px 6px;
+  }
+
+  #recap .timeline-event:hover {
+      transform: scale(1.1) translate(-50%, -50%);
+      background-color: #d1e3f6;
+      border-color: #3f6fa7;
+  }
+
+  #recap .timeline-event .year {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #3f6fa7;
+      font-size: 1.2rem;
+  }
+
+  #recap .timeline-event .label {
+      font-size: 0.95rem;
+      background: #7da6d9;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px #b9d6f288;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+  }
+
+  #recap .vertical-timeline {
+    position: relative;
+    margin: 40px auto;
+    padding-left: 36px;
+    max-width: 700px;
+  }
+
+  #recap .vtimeline-line {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, #7da6d9, #b9d6f2);
+      border-radius: 3px;
+      z-index: 0;
+  }
+
+  #recap .vtimeline-event {
+      position: relative;
+      margin-bottom: 38px;
+      min-height: 60px;
+      display: flex;
+      align-items: flex-start;
+      animation: fadeInUp 0.7s cubic-bezier(.4,1.4,.7,1) both;
+  }
+
+  #recap .vtimeline-dot {
+      width: 20px;
+      height: 20px;
+      background: #e8f1fa;
+      border: 3px solid #7da6d9;
+      border-radius: 50%;
+      position: absolute;
+      left: -23px;
+      top: 0;
+      z-index: 2;
+      box-shadow: 0 2px 8px #7da6d922;
+      transition: background 0.2s, border-color 0.2s;
+  }
+
+  #recap .vtimeline-event:hover .vtimeline-dot {
+      background: #b9d6f2;
+      border-color: #3f6fa7;
+  }
+
+  #recap .vtimeline-date {
+      min-width: 80px;
+      margin-left: 30px;
+      margin-top: 0px;
+      font-weight: bold;
+      color: #3f6fa7;
+      font-size: 1.18rem;
+      letter-spacing: 0.02em;
+      text-shadow: 1px 1px 0 #e8f1fa;
+      flex-shrink: 0;
+  }
+
+  #recap .vtimeline-content {
+      background: #e8f1fa;
+      border: 1.5px solid #7da6d9;
+      border-radius: 10px;
+      padding: 12px 18px;
+      margin-left: 20px;
+      box-shadow: 0 2px 8px #b9d6f211;
+      flex: 1 1 0;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+  }
+
+  #recap .vtimeline-event:hover .vtimeline-content {
+      transform: scale(1.05) translateY(-2px);
+      border-color: #3f6fa7;
+      box-shadow:
+      #5c8ddb4f 4px 4px,
+      #5c8ddb31 9px 9px,
+      #b7d1e73d 14px 14px;
+  }
+
+  #recap .vtimeline-content strong {
+      color: #3f6fa7;
+      font-size: 1.08rem;
+  }
+
+  #recap .vtimeline-content p {
+      margin: 6px 0 0 0;
+      color: #3c4a5b;
+      font-size: 1.01rem;
+  }
+
+  @media (max-width: 600px) {
+      #recap .vertical-timeline {
+          padding-left: 20px;
+      }
+      #recap .vtimeline-date {
+          font-size: 1rem;
+          min-width: 60px;
+      }
+      #recap .vtimeline-content {
+          padding: 10px 10px;
+          font-size: 0.97rem;
+      }
+  }
+
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(35px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
   /* Section sources */
   #sources {
     padding: 40px 20px;
@@ -462,7 +799,7 @@
     transform: scale(1.05);
   }
   
-  /* Timeline */
+  /* Timeline verticale pour les dates */
   .vertical-timeline {
     position: relative;
     margin: 40px auto;
@@ -578,43 +915,75 @@
       transform: translateY(0);
     }
   }
-  
-  
+    
   /* Tableau moderne et responsive */
-  .table-container {
-    overflow-x: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow:
-    #5ca88421 4px 4px,
-    #27a06719 7px 7px,
-    #2a8c5e14 10px 10px;
-  }
   .modern-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #caf3df;
-    border-radius: 10px;
+    background-color: var(--surface-color);
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px #00000008;
+    box-shadow: 0 6px 12px #00000070;
+    font-family: var(--font-family);
   }
-  .modern-table th, .modern-table td {
-    padding: 16px;
+  
+  .modern-table th,
+  .modern-table td {
+    padding: 16px 20px;
     text-align: left;
-    border-bottom: 1px solid var(--accent-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    border-bottom: 1px solid #cde2d8;
   }
-  .modern-table thead {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
+  
+  .modern-table th {
+    background-color: #65b390;
+    color: #ffffff;
+    border-bottom: 2px solid #4fa077;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
+  
+  .modern-table td {
+    border-right: 1px solid #cde2d8;
+  }
+  
+  .modern-table th:last-child,
+  .modern-table td:last-child {
+    border-right: none;
+  }
+  
+  .modern-table tbody tr:nth-child(even) {
+    background-color: #f4fdf8;
+  }
+  
+  .modern-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
   .modern-table tbody tr:hover {
-    background-color: rgba(154, 219, 187, 0.747);
-    transition: background-color var(--transition-speed);
+    background-color: #d9f0e6;
+    transform: translateY(-2px);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
   }
+  
+  .modern-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .modern-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+  }
+  
+  .modern-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+  }
+  
   @media (max-width: 600px) {
-    .modern-table th, .modern-table td {
-      padding: 12px;
-      font-size: 0.9rem;
+    .modern-table th,
+    .modern-table td {
+      padding: 12px 16px;
+      font-size: 0.85rem;
     }
   }
   
@@ -701,5 +1070,3 @@
   button:active {
     transform: scale(0.98);
   }
-  
-  
