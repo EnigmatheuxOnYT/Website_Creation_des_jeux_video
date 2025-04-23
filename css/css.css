@@ -91,7 +91,7 @@
   }
 
   /* Section "Pour rappel" */
-  #reminder {
+  #rappel {
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 1200px;
@@ -106,7 +106,7 @@
       #fff2cc2e 20px 20px;
   }
 
-  #reminder h2 {
+  #rappel h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #e69500;
@@ -118,7 +118,7 @@
     gap: 10px;
   }
 
-  #reminder h2::after {
+  #rappel h2::after {
     content: '';
     width: 50px;
     height: 3px;
@@ -129,27 +129,27 @@
     border-radius: 2px;
   }
 
-  #reminder i {
+  #rappel i {
     color: #e69500;
     font-size: 1.3em;
   }
 
-  #reminder strong {
+  #rappel strong {
     color: #e69500;
     font-weight: 700;
   }
 
   @media (max-width: 600px) {
-    #reminder {
+    #rappel {
       padding: 20px 6px;
       font-size: 1rem;
     }
-    #reminder h2 {
+    #rappel h2 {
       font-size: 1.18rem;
     }
   }
 
-  #reminder blockquote {
+  #rappel blockquote {
     margin: 20px 0;
     padding: 15px 20px;
     background: #fff5c3;
@@ -166,7 +166,7 @@
       #ffb84d33 10px 10px;
   }
 
-  #reminder .img-style {
+  #rappel .img-style {
     display: block;
     width: auto;
     max-width: 100%;
