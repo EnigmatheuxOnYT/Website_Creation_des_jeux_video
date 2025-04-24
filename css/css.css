@@ -230,6 +230,11 @@
     color: var(--text-color);
   }
 
+  section strong {
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+
   /* Section "Pour récapituler" */
   #recap {
     padding: 40px 20px;
@@ -628,6 +633,11 @@
     margin-bottom: 15px;
     color: #2e2f49;
   }
+
+  #transition strong {
+    color: #5b63d0;
+    font-weight: 700;
+  }
   
   /* Section sources */
   #sources {
@@ -737,7 +747,7 @@
     #27a06719 7px 7px,
     #2a8c5e14 10px 10px;
   }
-  
+
   /* Footer */
   footer {
     background: var(--surface-color);
