@@ -21,82 +21,481 @@
             </ul>
         </nav>
     </header>
-    <!-- Introduction du chapitre -->
+
     <section id="rappel">
         <h2><i class="fa-solid fa-brain"></i> Pour rappel</h2>
+    
         <p>
-            Créer un jeu vidéo, c'est pas juste une histoire de <strong>devs</strong> qui tapent du code toute la journée dans leur cave (même si parfois, c’est un peu ça). Derrière chaque pixel, chaque boucle de musique et chaque action que tu fais dans ton jeu, il y a toute une équipe de <strong>professionnels</strong> hyper spécialisés. Ce chapitre va te permettre de faire connaissance avec eux, et de comprendre qu’un <strong>jeu vidéo, c’est pas que des clics et des sauts</strong>, mais une véritable entreprise collective.
+            Quand on pense à la création d’un jeu vidéo, on imagine souvent un développeur qui code dans le noir avec une canette Monster à la main.
+            En réalité, c’est beaucoup (beaucoup) plus vaste.
+            Un jeu, c’est un travail d’équipe : <strong>designers, artistes, programmeurs, musiciens, testeurs, chefs de projet</strong>... chacun apporte sa pièce au puzzle.
         </p>
-    </section>
+    
+        <img src="images/designer_team.jpg" alt="Des designers en pleine création" class="img-style">
+    
+        <p>
+            Et pourtant... certains s’embarquent dans l’aventure en solo.
+            Oui, on parle des développeurs indé, ces équilibristes du jeu vidéo qui jonglent entre tous les métiers à la fois.
+            Mais pas de panique, on leur consacrera une section un peu plus bas.
+            Spoiler : ils méritent une médaille.
+        </p>
+    
+        <blockquote>
+            <i class="fa-solid fa-lightbulb"></i> Un jeu vidéo, c’est pas juste du gameplay et des graphismes. C’est une <strong>mini-entreprise créative</strong> où chaque poste joue un rôle essentiel.
+        </blockquote>
+    
+        <p>
+            Dans ce chapitre, on va explorer les grandes familles de métiers du jeu vidéo, de la conception artistique à la production, en passant par la programmation et le son.
+            Tu verras qu’il y a bien plus que des lignes de code derrière ton jeu préféré.
+        </p>
+    
+        <img src="images/pipeline_game_dev.jpg" alt="Schéma de pipeline de développement d’un jeu vidéo" class="img-style">
+    </section>    
 
     <!-- Développeurs -->
-    <section id="developers">
-        <h2>Les Développeurs – Les Magiciens du Code</h2>
+    <section id="developpeurs">
+        <h2><i class="fa-solid fa-desktop"></i> Les Développeurs – Les Magiciens du Code</h2>
+    
         <p>
-            Les <strong>développeurs</strong> sont les architectes du gameplay. Ils transforment les idées et concepts en réalité numérique. Concrètement, ils écrivent des lignes de code pour que tout fonctionne (même la moindre animation ou la collision entre deux objets).
+            Les <strong>développeurs</strong> sont les architectes du gameplay.
+            Ce sont eux qui transforment les idées, parfois floues ou grandioses, en une réalité numérique jouable et cohérente.
+            Ils traduisent la vision créative des game designers en une mécanique tangible, en écrivant des lignes et des lignes de code.
+            Chaque action que tu effectues dans un jeu — sauter, attaquer, ouvrir une porte, changer de niveau — a été pensée, codée, testée et optimisée par un ou plusieurs développeurs.
         </p>
-        <ul>
-            <li><strong>Développeur gameplay</strong> : Les mécaniques du jeu, c’est lui ! Un bouton, un saut, une attaque... il transforme tout ça en mouvements et actions.</li>
-            <li><strong>Développeur IA</strong> : Tu te souviens de cet ennemi hyper vicieux qui te suit partout ? Ou ce boss qui te donne du fil à retordre ? Eh bien, il est contrôlé par l’IA, codée par ce développeur.</li>
-            <li><strong>Développeur backend</strong> : C’est le gars qui s'assure que tout fonctionne en coulisses. Les serveurs, les bases de données, les classements en ligne... Bref, il évite que ton jeu tombe en panne !</li>
-        </ul>
-        <p><strong>Parmis les outils utilisés, tu peux retrouver:</strong> Unity (C#), Unreal Engine (C++ et Blueprint), Godot (GDScript), </p>
+
+        <p>
+            Le <strong>développeur gameplay</strong> est sans doute celui qu’on associe le plus directement au cœur du jeu.
+            Il conçoit toutes les interactions possibles : les sauts, les combats, la gravité, la vitesse de déplacement, les objets à ramasser...
+            Chaque sensation de jeu passe entre ses mains.
+            Grâce à lui, un bouton pressé se transforme en action précise à l’écran.
+        </p>
+    
+        <p>
+            Ensuite, il y a le <strong>développeur IA</strong>, spécialiste de l’intelligence artificielle.
+            C’est lui qui donne vie aux ennemis, aux personnages non-joueurs (PNJ), et à tout ce qui interagit "intelligemment" avec toi.
+            Si un ennemi te traque dans l’ombre, ou si un boss change de stratégie quand tu lui enlèves la moitié de sa vie, c’est grâce à l’IA qu’il a programmée.
+        </p>
+        
+        <img class="img-style" src="images/code_ia_python.png" alt="Code Pyhton du développeur IA">
+
+        <blockquote>
+            Voici, ci-dessus <i class="fa-solid fa-arrow-circle-up"></i>, un exemple de code Python illustrant le travail du développeur IA : l’intelligence artificielle permet à l’ennemi de se déplacer automatiquement vers le joueur, en adaptant sa trajectoire à chaque instant. Ce type d’algorithme, programmé par le développeur IA, donne vie aux ennemis et rend leur comportement dynamique et réactif dans le jeu, comme décrit dans le paragraphe ci-dessus.
+        </blockquote>
+    
+        <p>
+            Le <strong>développeur backend</strong>, quant à lui, agit dans les coulisses.
+            On le voit rarement, mais son travail est essentiel.
+            Il gère les bases de données, les serveurs, les connexions entre joueurs, les sauvegardes, les mises à jour...
+            En ligne, il garantit la stabilité de l’expérience.
+            Sans lui, un jeu multijoueur s’écroule en quelques secondes.
+        </p>
+    
+        <img class="img-style" src="images/code_backend.png" alt="Code backend pour un jeu multijoueur">
+        
+        <blockquote>
+            <i class="fa-solid fa-quote-left"></i> Le backend : l'infrastructure invisible qui maintient le jeu en ligne fluide et stable.
+        </blockquote>
+
+        <p>
+            Parmi les outils les plus utilisés par les développeurs, on retrouve les moteurs de jeu comme <strong>Unity</strong> (qui utilise le langage C#), <strong>Unreal Engine</strong> (très puissant, basé sur le C++ et un système visuel appelé Blueprint), ou encore <strong>Godot</strong> (qui repose sur un langage proche de Python : GDScript). Ces moteurs permettent de construire des univers entiers, de gérer la physique, les animations, les sons... et bien sûr, d'intégrer tout le code du jeu.
+        </p>
+
+        <img src="images/interface_unrealengine.png" alt="Interface éditeur de matériaux" class="img-style">
+        
+        <blockquote>
+            Ici <i class="fa-solid fa-arrow-circle-up"></i>, tu peux voir l'interface de l'éditeur de l'éditeur de matériaux d'Unreal Engine : (1) la barre de menu principale donne accès aux fonctions globales du logiciel ; (2) la barre d’outils contextuelle propose des raccourcis pour des actions fréquentes comme sauvegarder ou prévisualiser ; (3) la fenêtre de prévisualisation affiche le rendu du matériau sur un objet 3D ; (4) le panneau des propriétés permet de configurer les paramètres du matériau sélectionné ; (5) l’éditeur de graphes de matériaux est l’espace principal où les nœuds sont connectés pour définir l’apparence du matériau ; (6) la section des statistiques affiche des informations techniques sur le shader ; (7) enfin, la palette de nœuds propose l’ensemble des nœuds disponibles à ajouter au graphe pour enrichir la création du matériau.
+        </blockquote>
     </section>
 
     <!-- Artistes -->
-    <section id="artists">
-        <h2>Les Artistes – Ceux qui rendent tout beau (ou pas, si on veut un style moche et décalé)</h2>
+    <section id="artistes">
+        <h2><i class="fa-solid fa-paintbrush"></i> Les Artistes – Ceux qui rendent tout beau (ou pas, si on veut un style moche et décalé)</h2>
+    
         <p>
-            Les <strong>artistes</strong> sont responsables de l’univers visuel du jeu. Leur job, c’est de rendre tout beau (ou de créer un univers moche mais fun). L’ambiance visuelle d’un jeu peut vraiment en faire un chef-d’œuvre… ou un énorme flop.
+            Les <strong>artistes</strong> sont les créateurs de l’univers visuel d’un jeu vidéo.
+            Leur rôle est de donner une âme graphique au projet, de créer une ambiance, une identité visuelle forte.
+            Que ce soit un jeu ultra-réaliste, un univers cartoon, un style rétro pixelisé ou un monde complètement barré, c’est à eux qu’on doit cette esthétique.
+            L’apparence d’un jeu peut tout changer : elle peut attirer instantanément le joueur ou, au contraire, le faire fuir.
+            Mais parfois, un style "moche" ou décalé est totalement assumé, et devient même une signature !
         </p>
-        <ul>
-            <li><strong>Character Designer</strong> : Ils font en sorte que ton héro (ou ton monstre de fin de niveau) soit mémorable. Le design de ton personnage, c’est <em>eux</em>.</li>
-            <li><strong>Level Designer</strong> : Ce sont eux qui créent les parcours dans lesquels tu vas te perdre pendant 3 heures. Chaque niveau doit offrir une difficulté croissante et une évolution de l’histoire.</li>
-            <li><strong>Concept Artist</strong> : Avant de commencer à créer, ils dessinent des croquis pour <em>visualiser</em> l’univers, les personnages et l’environnement. C’est un peu comme une carte au trésor avant de partir en expé !</li>
-        </ul>
-        <p><strong>Outils utilisés :</strong> Blender, Photoshop, Maya, Zbrush pour les 3D, Procreate pour la 2D</p>
+    
+        <img src="images/games_style.jpg" alt="Certains styles graphiques parmi d'autres" class="img-style">
+
+        <blockquote>
+            Certains styles graphiques parmi tant d'autres <i class="fa-solid fa-arrow-circle-up"></i>.
+        </blockquote>
+
+        <p>
+            Le <strong>Character Designer</strong> est chargé d’imaginer et de dessiner les personnages du jeu.
+            Le héros que tu incarnes, les ennemis que tu affrontes, les créatures bizarres ou les PNJ attachants... tout vient de son imagination.
+            Il s’assure que chaque personnage ait un look unique et marquant, en cohérence avec l’univers du jeu.
+        </p>
+    
+        <img src="images/charachter_design.jpg" alt="Character Design" class="img-style">
+
+        <p>
+            Le <strong>Level Designer</strong>, lui, ne se contente pas de dessiner des décors : il conçoit des niveaux entiers.
+            Il pense les environnements comme des terrains de jeu, en jouant sur la difficulté, l’exploration, le rythme et les surprises.
+            Si tu galères à travers un labyrinthe ou que tu découvres un passage secret bien planqué, c’est son travail qui est en jeu.
+        </p>
+    
+        <img src="images/level_design.jpg" alt="Level Design" class="img-style">
+
+        <p>
+            Quant au <strong>Concept Artist</strong>, il intervient très tôt dans la création.
+            Il dessine des esquisses, des idées, des ambiances... avant même que le jeu ne prenne forme.
+            Ses dessins servent de guide aux autres membres de l’équipe.
+            C’est un peu le cartographe du monde à venir, celui qui donne une première vision du projet.
+        </p>
+    
+        <p>
+            Pour créer tout cela, les artistes s’appuient sur des outils puissants.
+            <strong>Blender</strong>, <strong>Maya</strong> et <strong>ZBrush</strong> sont utilisés pour la modélisation 3D, tandis que <strong>Photoshop</strong> ou <strong>Procreate</strong> sont parfaits pour le dessin 2D et les textures.
+            Chaque outil permet de sculpter, peindre, animer et construire les visuels qui feront vibrer le joueur.
+        </p>
+
+        <div class="image-slider">
+            <img src="images/blender.jpg" alt="Blender" />
+            <img src="images/maya.png" alt="Maya" />
+            <img src="images/zbrush.jpg" alt="ZBrush" />
+            <img src="images/photoshop.png" alt="Photoshop" />
+            <img src="images/procreate.png" alt="Procreate" />
+        </div>
+
+        <blockquote>
+            Ci-dessus <i class="fa-solid fa-arrow-circle-up"></i>, tu peux voir les différentes interfaces des outils que je t'ai présentés (dans l'ordre : Blender, Maya, ZBrush, Photoshop et enfin Procreate).
+        </blockquote>
     </section>
 
     <!-- Sound Designers -->
     <section id="sound-designers">
-        <h2>Les Sound Designers – Les Architectes du Son</h2>
+        <h2><i class="fa-solid fa-volume-up"></i> Les Sound Designers – Les Architectes du Son</h2>
+    
         <p>
-            Ah, les <strong>sound designers</strong> ! Si tu as déjà joué à un jeu où tu n’entendais pas les bruitages, tu sais que le son a une énorme importance. Le silence, c’est bien, mais pas dans un jeu vidéo. Ces gars-là vont s’assurer que chaque coup de feu, chaque explosion, et même le <strong>bruit du vent</strong> sont parfaitement adaptés à l’ambiance du jeu.
+            Ah, les <strong>sound designers</strong> !
+            Ce sont les maîtres du son, ceux qui donnent une véritable dimension sensorielle au jeu.
+            Si tu as déjà joué à un jeu sans bruitages ou avec une musique totalement décalée, tu sais à quel point l’expérience peut vite devenir fade, voire gênante.
+            Dans un jeu vidéo, le silence peut avoir un rôle, mais il ne doit jamais être là par accident.
+            Les sound designers veillent à ce que chaque ambiance sonore soit cohérente, immersive et expressive.
         </p>
-        <ul>
-            <li><strong>Création des effets sonores</strong> : Un cri d’ennemi, le bruit de l’attaque spéciale du boss, la porte qui grince… tout ça, c’est leur travail.</li>
-            <li><strong>Composition de la musique</strong> : Le style musical est ultra-important. Tu t’imagines Mario avec une musique de film d’horreur ? Pas possible ! Chaque style de jeu a son ambiance musicale unique.</li>
-            <li><strong>Ambiance sonore globale</strong> : Ils gèrent aussi l’égalisation du son global pour éviter que le joueur se fasse exploser les tympans pendant un moment critique (et ça, c’est déjà arrivé).</li>
-        </ul>
-        <p><strong>Outils utilisés :</strong> Pro Tools, Audacity, FL Studio</p>
+    
+        <div class="player">
+            <div class="poster_musique">
+                <img src="images/mario64.jpg" alt="Poster Mario 64" />
+            </div>    
+            <audio controls>
+                <source src="audio/mario64_theme.mp3" type="audio/mp3">
+                Oups... 😕 Votre navigateur ne supporte pas la balise audio.
+            </audio>
+        </div>
+
+        <blockquote>
+            Un thème iconique qui évoque des souvenirs nostalgiques (pour moi en tout cas) des premières aventures de Mario sur la Nintendo 64 et les Nintendo 2DS et 3DS <i class="fa-solid fa-arrow-circle-up"></i> .
+        </blockquote>
+
+        <p>
+            Leur première mission est la <strong>création des effets sonores</strong>.
+            Chaque bruit – qu’il s’agisse d’un pas sur la neige, d’un coup d’épée, d’un cri d’ennemi ou d’une explosion – est soigneusement conçu.
+            Ces sons sont parfois enregistrés en studio, parfois fabriqués à partir de sons du quotidien modifiés ou mixés pour obtenir un rendu unique.
+        </p>
+    
+        <blockquote>
+            <i class="fa-solid fa-quote-left"></i> Créer une ambiance sonore, c’est façonner l'âme invisible d’un monde.
+        </blockquote>
+
+        <p>
+            Ensuite, il y a la <strong>composition musicale</strong>.
+            La musique d’un jeu donne le ton, l’émotion, le rythme.
+            Imagine Mario sans ses célèbres mélodies ou un jeu d’horreur avec une musique joyeuse : ça ne marcherait pas !
+            Le compositeur travaille main dans la main avec l’équipe artistique pour créer une bande-son qui colle parfaitement à l’univers et au gameplay.
+        </p>
+    
+        <blockquote>
+            Capture d’écran <i class="fa-solid fa-arrow-circle-down"></i> de la composition d’une musique orchestrale pour un jeu vidéo, réalisée sur FL Studio. Cordes, cuivres et effets sont agencés pour renforcer l’intensité narrative.
+        </blockquote>
+
+        <img src="images/creation_musique.png" alt="Création de musique de jeu vidéo" class="img-style">
+
+        <p>
+            Enfin, ils s’occupent de <strong>l’ambiance sonore globale</strong>.
+            Cela signifie qu’ils équilibrent les volumes, les transitions, les effets spéciaux, pour que tout soit harmonieux.
+            Ils évitent par exemple que le son d’un menu couvre celui d’une cinématique importante, ou que les tympans du joueur explosent lors d’une scène trop bruyante.
+            Leur rôle est donc aussi technique que créatif.
+        </p>
+    
+        <div class="video-container">
+            <video controls poster="images/undertale_poster.png">
+                <source src="videos/musique_undertale.mp4" type="video/mp4">
+                Oups... 😕 Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <h3 class="video-caption"><i class="fa-solid fa-photo-video"></i> Comment Toby Fox a composé la musique d'Undertale ?</h3>
+        </div>
+
+        <blockquote>
+            Dans cette vidéo <i class="fa-solid fa-arrow-circle-up"></i> , tu peux découvrir comment Toby Fox a composé la musique d’Undertale avec des outils simples comme FL Studio et un vieux clavier.
+            Il y explique comment il a utilisé des motifs musicaux récurrents (les leitmotivs) pour renforcer l’émotion et l'identité des personnages, comment il a limité volontairement les instruments pour coller au style rétro, et comment chaque thème s’intègre parfaitement dans la narration du jeu.
+            Une belle démonstration de créativité, même sans gros moyens techniques.
+        </blockquote>
+
+        <p>
+            Pour tout ça, les sound designers utilisent des logiciels spécialisés comme <strong>Pro Tools</strong> (référence dans l’industrie du son), <strong>FL Studio</strong> (très utilisé pour la composition), ou encore <strong>Audacity</strong> (simple mais efficace pour certaines tâches de montage ou nettoyage audio).
+        </p>
     </section>
 
     <!-- Game Designers -->
     <section id="game-designers">
-        <h2>Les Game Designers – Les Architectes du Fun</h2>
+        <h2><i class="fas fa-puzzle-piece"></i> Les Game Designers – Les Architectes du Fun</h2>
+    
         <p>
-            Le <strong>Game Designer</strong> (ou "GD") est un peu le maestro derrière la musique du gameplay. Si les développeurs sont responsables de la technique, le game designer est responsable de l’expérience. Il crée des <strong>règles du jeu</strong>, il équilibre les mécaniques pour que chaque moment soit fun, excitant et fluide.
+            Le <strong>Game Designer</strong>, souvent surnommé "GD", est un peu le chef d’orchestre de l’expérience de jeu.
+            Si les développeurs sont les mains qui fabriquent, lui est l’esprit qui imagine.
+            C’est à lui qu’on doit les mécaniques qui rendent un jeu addictif, fluide, et surtout fun.
+            Il ne code pas forcément, mais il définit les <strong>règles</strong>, les systèmes et les dynamiques qui vont donner vie à l’univers du jeu.
         </p>
-        <ul>
-            <li><strong>Les règles</strong> : Quelles actions le joueur peut faire ? Quel est l’objectif principal ?</li>
-            <li><strong>L'équilibre</strong> : Le jeu ne doit pas être trop facile ou trop difficile. Trop facile, c’est chiant, trop dur, c’est frustrant. Le GD crée donc une courbe de difficulté pour que tu sois toujours dans le jeu sans te sentir trop frustré.</li>
-            <li><strong>Les interactions avec l’environnement</strong> : Comment tu interagis avec les objets, les NPCs, ou même l’environnement.</li>
-        </ul>
-        <p><strong>Outils utilisés :</strong> Spreadsheets, Miro, Trello</p>
-    </section>
+    
+        <p>
+            Le game designer commence par poser les bases : <strong>quelles sont les actions possibles ?</strong>
+            Peut-on sauter ?
+            Courir ?
+            Parler à un PNJ ?
+            Lancer une attaque spéciale ?
+            Il décide aussi des objectifs principaux : terminer un niveau, résoudre une énigme, battre un boss...
+            C’est lui qui donne un sens à chaque action du joueur.
+        </p>
+    
+        <img src="images/game_designer.jpg" alt="Le Game Designer" class="img-style">
+
+        <p>
+            Il est aussi en charge de <strong>l’équilibrage</strong>.
+            Un bon jeu doit être ni trop facile (sinon on s’ennuie), ni trop dur (sinon on rage-quit). 
+            Le game designer travaille donc sur une courbe de difficulté progressive, qui garde le joueur engagé sans le décourager.
+            Il ajuste les points de vie des ennemis, la fréquence des récompenses, le rythme des niveaux... tout est calculé pour maintenir une tension agréable.
+        </p>
+    
+        <p>
+            Enfin, il conçoit les <strong>interactions avec l’environnement</strong>.
+            Que se passe-t-il quand on ouvre un coffre ?
+            Peut-on déplacer un objet pour résoudre une énigme ?
+            Les dialogues avec les PNJ changent-ils en fonction des choix du joueur ?
+            Ces détails, souvent invisibles au premier abord, participent à rendre le monde vivant et cohérent.
+        </p>
+    
+        <div class="video-container">
+            <video controls poster="images/metier_game_designer.jpg">
+                <source src="videos/metier_game_designer.mp4" type="video/mp4">
+                Oups... 😕 Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <h3 class="video-caption"><i class="fa-solid fa-photo-video"></i> Le métier de Game Designer</h3>
+        </div>
+
+        <p>
+            Pour organiser toutes ces idées, le game designer utilise souvent des outils comme des <strong>spreadsheets</strong> (tableurs pour équilibrer les stats), <strong>Miro</strong> (pour faire des schémas ou cartes mentales), ou encore <strong>Trello</strong> (pour suivre les tâches de l’équipe).
+        </p>
+    </section>    
 
     <!-- Testeurs -->
-    <section id="testers">
-        <h2>Les Testeurs (QA) – Les héros du debug</h2>
+    <section id="testeurs">
+        <h2><i class="fas fa-check-circle"></i> Les Testeurs (QA) – Les Héros du Debug</h2>
+    
         <p>
-            Les <strong>testeurs</strong> sont probablement les personnes les moins célébrées, mais aussi les plus essentielles. Leur travail est de <strong>chercher les bugs</strong> et de tester le gameplay du jeu sous tous ses angles. Sans eux, tu pourrais t’imaginer dans un jeu, où tu passes à travers les murs, ou où ton personnage ne peut pas monter les escaliers (ça serait un peu gênant…).
+            Tu sais déjà (cf. chapitre précédent) que les tests sont indispensables tout au long du développement.
+            Les retours joueurs, les rapports de bugs, les suggestions... tout ça est crucial.
+            Mais derrière ces données, il y a les <strong>testeurs QA</strong> : celles et ceux qui passent leurs journées à retourner le jeu dans tous les sens.
         </p>
-        <ul>
-            <li><strong>Testent</strong> toutes les fonctionnalités du jeu.</li>
-            <li>Cherchent des <strong>bugs</strong> qui empêcheraient le jeu de fonctionner correctement.</li>
-            <li>Vérifient la <strong>jouabilité</strong> : Le jeu est-il fluide, compréhensible, équilibré ?</li>
-        </ul>
+    
+        <p>
+            Leur mission, ce n’est pas juste de repérer les gros bugs visibles : c’est aussi de dénicher les failles invisibles, celles qui apparaissent quand tu fais une action improbable ou quand tu testes un niveau pour la 48e fois d’affilée.
+            Ce sont les gardiens du détail, les protecteurs de la fluidité, et parfois... les premiers joueurs à vraiment "vivre" le jeu dans sa totalité.
+        </p>
+    
+        <p>
+            Le métier a bien évolué : aujourd’hui, les testeurs collaborent directement avec les développeurs et les game designers pour affiner les mécaniques, corriger les incohérences de gameplay et ajuster la difficulté.
+            Ils utilisent des <strong>outils de suivi</strong> (<strong>Jira</strong>, <strong>TestRail</strong>...) et rédigent des <strong>rapports</strong> précis pour chaque anomalie détectée.
+        </p>
+    
+        <div class="video-container">
+            <video controls poster="images/qa_testing.jpg">
+                <source src="videos/qa_testing_demo.mp4" type="video/mp4">
+                Oups... 😕 Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <h3 class="video-caption"><i class="fa-solid fa-photo-video"></i> Une journée dans la peau d’un testeur QA</h3>
+        </div>
+
+        <blockquote>
+            <i class="fa-solid fa-quote-left"></i> Il faut tester sur PC, consoles, frigos connectés s’il le faut. L’important, c’est que ça tourne partout.
+        </blockquote>
+
+        <p>
+            D’ailleurs, certains studios font appel à des profils atypiques : anciens joueurs pros, personnes en situation de handicap (pour tester l’accessibilité), passionnés de statistiques...
+            Car oui, tester un jeu, c’est aussi comprendre comment il sera ressenti par tout type de joueur.
+        </p>
+    
+        <p>
+            Bref, si le jeu tourne bien, que tu n’es pas coincé dans un mur, et que tu n’as pas eu envie de jeter ta manette, tu peux remercier les testeurs.
+        </p>
     </section>
+
+    <section id="production">
+        <h2><i class="fa-solid fa-briefcase"></i> Le Chef de projet – Derrière les Coulisses du Jeu</h2>
+    
+        <p>
+            Après les tests et la chasse aux bugs, il faut bien s'assurer que tout le processus de développement se déroule sans accroc.
+            C’est là qu'interviennent les rôles organisationnels et de production qui permettent au projet de rester sur la bonne voie.
+            Si les testeurs vérifient que tout fonctionne, les producteurs s’assurent que tout reste dans les clous.
+        </p>
+
+        <div class="video-container">
+            <video controls>
+                <source src="videos/metier_producer.mp4" type="video/mp4">
+                Oups... 😕 Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <h3 class="video-caption"><i class="fa-solid fa-photo-video"></i> Une journée dans la vie d'un Chef de projet</h3>
+        </div>
+
+        <p>
+            Le <strong>Producer</strong> (ou Chef de projet) est celui qui garde un œil sur la ligne d’arrivée.
+            Il coordonne les équipes, gère les plannings, veille à ce que les budgets soient respectés et que les deadlines ne soient pas dépassées.
+            Son rôle est de s'assurer que chaque phase du développement se déroule dans les temps et de résoudre tous les imprévus qui peuvent survenir.
+            Pour mon projet <strong>Kage no Michi</strong>, j'ai assumé ce rôle avec mon équipe, en veillant à ce que nous restions sur la bonne voie.
+            Nous avons organisé des réunions régulières sur Discord pour suivre l’avancée du projet et chaque début de semaine, je donnais des tâches précises à chaque membre de l’équipe, avec des objectifs à réaliser avant la fin de la semaine.
+            Ce suivi constant a été essentiel pour nous permettre de respecter nos délais et de progresser efficacement.
+        </p>        
+    
+        <img src="images/diagramme_gantt.webp" alt="Diagramme de Gantt" class="img-style">
+
+        <blockquote>
+            Afin d’optimiser l’organisation de l’équipe, le Chef de projet utilise un <strong>diagramme de Gantt</strong> <i class="fa-solid fa-arrow-circle-up"></i> pour planifier les tâches, répartir les responsabilités et suivre l’avancement du projet en temps réel.
+        </blockquote>        
+
+        <p>
+            Pour soutenir ce travail, l'<strong>Assistant de production</strong> prend en charge les aspects plus administratifs et logistiques.
+            Réunions, suivi des tâches, organisation des plannings : il aide à maintenir l’ordre et la communication au sein de l’équipe.
+            Il veille à ce que personne ne perde de vue les objectifs et que chaque détail soit pris en compte.
+        </p>
+    
+        <p>
+            Ensuite, il y a le <strong>QA Lead</strong> (ou Test Manager), qui travaille en étroite collaboration avec les testeurs pour encadrer l’ensemble de la phase de test.
+            Il est responsable de la structure des tests, de l’analyse des retours et de la mise en œuvre des corrections nécessaires avant que le jeu ne soit prêt pour la publication. Sa mission est de garantir que le jeu soit à la fois stable et fluide, sans bugs majeurs, et que l’expérience joueur soit irréprochable.
+        </p>
+    
+        <blockquote>
+            <i class="fa-solid fa-quote-left"></i> La clé d'un projet réussi ? Une organisation sans faille et une gestion qui anticipe les imprévus à chaque étape.
+        </blockquote>
+    </section>    
+
+    <section id="narration-univers">
+        <h2><i class="fa-solid fa-feather-pointed"></i> Narration & Univers – Ceux qui donnent vie (et du sens) à tout ça</h2>
+    
+        <p>
+            Avant que le joueur ne prenne la manette, il y a une plume qui trace le chemin.
+            Le <strong>scénariste</strong> – ou narrative designer – invente l’histoire, les personnages, les dialogues, les quêtes et surtout les choix narratifs qui influenceront le cours du jeu.
+            C’est lui qui donne une âme au gameplay, qui transforme une simple mission en aventure inoubliable.
+            Dans notre cas, nous avons utilisé <strong>Google Docs</strong> pour rédiger l'intégralité des dialogues et de l’histoire de <em>Kage no Michi</em>, comme tu peux le constater sur la capture d’écran ci-dessous <i class="fa-solid fa-arrow-circle-down"></i>.
+            Cet outil collaboratif nous a permis d'écrire à plusieurs mains, de structurer les chapitres, et d’ajuster facilement les choix et ramifications du scénario.
+        </p>        
+    
+        <img src="images/histoire_kagenomichi.PNG" alt="Capture d'écran Kage no Michi" class="img-style">
+
+        <p>
+            À ses côtés, le <strong>world builder</strong> imagine l’univers tout entier.
+            Géographie, mythologie, factions, religions, légendes, structures politiques...
+            Rien n’est laissé au hasard.
+            Même le nom d’une ville ou d’un plat local peut raconter quelque chose.
+            C’est un travail de fond, souvent invisible, mais essentiel pour rendre le monde crédible et captivant.
+        </p>
+    
+        <p>
+            Et quand le jeu s’apprête à sortir à l’international, le <strong>traducteur</strong> entre en scène.
+            Mais ici, pas question de faire du mot-à-mot.
+            La <em>localisation</em>, c’est un art subtil : il faut adapter les références culturelles, reformuler les blagues, trouver l'équivalent d’un jeu de mots, parfois même réécrire un dialogue pour qu’il ait du sens dans une autre langue.
+            Grâce à eux, le jeu peut toucher des millions de joueurs à travers le monde sans jamais trahir son identité.
+        </p>
+    
+        <blockquote>
+            <i class="fa-solid fa-quote-left"></i> Un bon gameplay te fait jouer, une bonne narration te fait rester.
+        </blockquote>
+    </section>     
+
+    <section id="ux-ui">
+        <h2><i class="fa-solid fa-brain"></i> Psychologie & Expérience Utilisateur – Là où ton cerveau dit merci</h2>
+    
+        <p>
+            Jouer à un jeu vidéo, ce n’est pas seulement appuyer sur des boutons.
+            C’est une expérience complète, mentale et sensorielle.
+            Et pour que tout soit fluide, intuitif et agréable, il y a ceux qu’on oublie trop souvent : les architectes de l’expérience.
+        </p>
+    
+        <p>
+            L’<strong>UX Designer</strong> (User Experience) pense comme un joueur.
+            Il ne code pas, il ne dessine pas, mais il conçoit la manière dont tu vas interagir avec le jeu.
+            Est-ce que tu trouves ton inventaire facilement ?
+            Est-ce que tu comprends les mécaniques sans lire un manuel de 40 pages ?
+            Est-ce que tu ressens du plaisir à progresser ?
+            C’est son terrain.
+        </p>
+
+        <div class="image-slider">
+            <img src="images/ux_design.jpeg" alt="UX Designer">
+            <img src="images/ux_design2.jpeg" alt="UX Designer 2" />
+        </div>
+    
+        <p>
+            À côté, le <strong>UI Designer</strong> (User Interface) donne forme à ces idées.
+            Il conçoit l’apparence des menus, des HUD, des inventaires, des barres de vie, bref tout ce que tu vois à l’écran pour comprendre ce que tu fais.
+            Il doit jongler entre esthétique et efficacité, car un menu stylé mais incompréhensible, c’est l’échec assuré.
+        </p>
+    
+        <img src="images/ui_design.jpg" alt="UI Designer" class="img-style">
+
+        <p>
+            Enfin, l’<strong>ergonome</strong> intervient parfois pour affiner encore plus l’accessibilité.
+            Il s’assure que tout est logique, lisible, confortable – que tu joues sur PC, manette, ou même avec une seule main.
+            C’est lui qui pense aux daltoniens, aux jeunes joueurs, aux vétérans.
+            Parce qu’un bon jeu, c’est aussi un jeu qui s’adapte à tous.
+        </p>
+    
+        <blockquote>
+            <i class="fa-solid fa-quote-left"></i> Si tu n’as pas à réfléchir pour comprendre comment jouer… c’est qu’ils ont fait du bon boulot.
+        </blockquote>
+    </section>
+
+    <section id="indie-developers">
+        <h2><i class="fas fa-shield"></i> Les Développeurs Indie – Quand Tu Dois Tout Faire Tout Seul</h2>
+    
+        <p>
+            Les <strong>développeurs indie</strong> (ou indé pour les puristes) sont les véritables couteaux suisses du monde du jeu vidéo. 
+            Quand tu es seul à gérer un projet, tu n’as pas le luxe de te concentrer sur un seul aspect du développement.
+            En tant que développeur indie, tu vas devoir porter plusieurs casquettes à la fois : <strong>programmeur, artiste, sound designer, scénariste</strong>, et parfois même chef de projet.
+            Si tu veux faire ton jeu du début à la fin, tu vas devoir jongler avec tous ces métiers, souvent avec des ressources limitées.
+        </p>
+    
+        <p>
+            Cela veut dire que, contrairement aux grandes équipes de développement où chaque membre se spécialise dans un domaine, tu vas devoir apprendre un peu de tout.
+            Tu coderas le gameplay, mais aussi le système d'interface utilisateur (UI), tu créeras des assets graphiques, ou même composer une bande-son si nécessaire.
+            Ce type de travail peut être incroyablement gratifiant, mais aussi très exigeant.
+            La gestion du temps et l’organisation deviennent alors cruciales, car, en plus de la création, il te faudra aussi gérer les aspects administratifs comme le financement, le marketing, et la distribution.
+        </p>
+        
+        <div class="video-container">
+            <video controls poster="images/iso_core.jpg">
+                <source src="videos/dev_indie.mp4" type="video/mp4">
+                Oups... 😕 Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <h3 class="video-caption"><i class="fa-solid fa-photo-video"></i> Ce que 2 ans de travail indie donne</h3>
+        </div>
+
+        <p>
+            Cependant, bien que les défis soient nombreux, travailler seul sur un projet indie te permet aussi d'avoir une liberté totale de création.
+            Tu es le maître à bord de ton propre univers. Tout, de la direction artistique à l’histoire, passe par tes mains.
+            Cela peut être extrêmement motivant, mais également stressant, surtout lorsque tu dois jongler avec des tâches techniques et créatives en même temps.
+            Dans ce contexte, le rôle de chef de projet se confond souvent avec celui du développeur, ce qui implique un suivi rigoureux du planning et des objectifs.
+        </p>
+    
+        <p>
+            Être un développeur indie, c'est faire preuve de polyvalence, d'organisation et de persévérance.
+            Si tu choisis cette voie, prépare-toi à une aventure où chaque jour t’apporte son lot de défis, mais aussi une immense satisfaction une fois ton jeu terminé et entre les mains des joueurs.
+        </p>
+    </section>    
 
     <!-- Pour Récapituler -->
     <section id="recap">
@@ -105,29 +504,29 @@
             Dans l’industrie du jeu vidéo, chaque métier a sa place, et tous travaillent main dans la main pour <strong>créer une expérience immersive et fun</strong>. Que ce soit l’idée du jeu ou la réalisation technique, <strong>chaque personne</strong> est cruciale dans ce processus complexe. Mais au final, c’est <strong>le joueur</strong> qui profite du résultat, un sourire aux lèvres, prêt à traverser le dernier niveau… ou à mourir 47 fois d’affilée.
         </p>
             <h2>Les métiers impliqués dans la création d’un jeu vidéo</h2>
+
             <table class="modern-table">
-                <table class="modern-table">
-                    <thead>
+                <thead>
                     <tr>
                         <th>Famille de métiers</th>
                         <th>Exemples de rôles</th>
                         <th>Mission principale</th>
                     </tr>
-                    </thead>
-                    <tbody>
+                </thead>
+                <tbody>
                     <tr>
                         <td>Design & Scénario</td>
-                        <td>Game Designer, Level Designer, Scénariste, UI/UX Designer</td>
-                        <td>Imaginer les règles, niveaux, histoire et expérience utilisateur</td>
+                        <td>Game Designer, Level Designer, Scénariste, UI/UX Designer, Narrative Designer, World Builder</td>
+                        <td>Imaginer les règles, niveaux, histoire, expérience utilisateur et monde du jeu</td>
                     </tr>
                     <tr>
                         <td>Programmation & Technique</td>
-                        <td>Programmeur, Technical Artist, QA Tester, Data Analyst</td>
+                        <td>Programmeur, Technical Artist, QA Tester, Data Analyst, Developer Indie</td>
                         <td>Développer, optimiser, tester et analyser le jeu</td>
                     </tr>
                     <tr>
                         <td>Graphisme & Animation</td>
-                        <td>Graphiste 2D/3D, Animateur, Concept Artist</td>
+                        <td>Graphiste 2D/3D, Animateur, Concept Artist, Character Designer</td>
                         <td>Créer les visuels, personnages, décors et animations</td>
                     </tr>
                     <tr>
@@ -137,7 +536,7 @@
                     </tr>
                     <tr>
                         <td>Production & Gestion</td>
-                        <td>Chef de projet/Producer, Community Manager, Localisation</td>
+                        <td>Chef de projet/Producer, Community Manager, Assistant de production, QA Lead/ Test Manager</td>
                         <td>Organiser, coordonner, communiquer et adapter le jeu</td>
                     </tr>
                     <tr>
@@ -145,9 +544,24 @@
                         <td>Testeur d’accessibilité, Localisateur</td>
                         <td>Rendre le jeu accessible et adapté à tous les publics</td>
                     </tr>
-                    </tbody>
-                </table>
-            </table>        
+                    <tr>
+                        <td>Psychologie & Expérience Utilisateur</td>
+                        <td>UX Designer, UI Designer, Ergonome</td>
+                        <td>Optimiser l'expérience utilisateur, la lisibilité, l’accessibilité et l’ergonomie des interfaces</td>
+                    </tr>
+                    <tr>
+                        <td>Organisation & Production</td>
+                        <td>Chef de projet, Assistant de production, QA Lead / Test Manager</td>
+                        <td>Coordonner les équipes, gérer les plannings, budgets et intégration des retours</td>
+                    </tr>
+                    <tr>
+                        <td>Développeur Indie</td>
+                        <td>Développeur Indie</td>
+                        <td>Porter plusieurs casquettes : programmation, graphisme, son, scénario, et gestion de projet</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <blockquote>
                 <i class="fa-solid fa-quote-left"></i> Il faut tout un village pour faire un bon jeu vidéo.
             </blockquote>
@@ -155,25 +569,212 @@
 
     <!-- Sources -->
     <section id="sources">
-        <h3>🥸 Sources pour les plus curieux (et les nerds)</h3>
-        <ul>
-            <li><a href="https://www.gamasutra.com" target="_blank">Gamasutra </a>(tout sur le développement et le marketing des jeux vidéo)</li>
-            <li><a href="https://www.gamechoiceawards.com" target="_blank">Game Developer’s Choice Awards</a></li>
-            <li><a href="https://docs.unrealengine.com" target="_blank">Unreal Engine Documentation</a></li>
-            <li><a href="https://www.blenderguru.com" target="_blank">Blender Guru</a></li>
-        </ul>
-    </section>
-
-    <!-- Bonus pour plus tard -->
-    <section id="bonus">
-        <h3>Bonus à Ajouter Plus Tard</h3>
-        <ul>
-            <li>Vidéo timelapse d’un développeur en train de créer un petit jeu simple</li>
-            <li>Infographie ou schéma interactif des étapes de développement et des métiers associés</li>
-            <li>Quiz interactif pour faire deviner à l’utilisateur quel métier il ferait dans l’industrie du jeu vidéo</li>
-            <li>GIFs/memes de devs ou des moments drôles dans la production de jeux</li>
-            <li>Anecdotes sur la création de jeux célèbres</li>
-        </ul>
+        <h2>🥸 Sources pour les plus curieux (et les nerds)</h2>
+        
+        <div class="source-categories">
+            <!-- Catégorie Vidéos -->
+            <div class="source-category">
+                <h3><i class="fas fa-film" style="margin: 1rem 0"></i> Vidéos</h3>
+                <div class="source-grid">
+                    <div class="source-item">
+                        <a href="https://www.youtube.com/watch?v=LPCBm59yFfI" target="_blank">
+                            <i class="fab fa-youtube"></i> How Toby Fox Composed the Music of UNDERTALE - ToffeeBun
+                        </a>
+                        <h3 class="source-description">Création musicale dans le jeu vidéo</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://www.youtube.com/watch?v=UbgHcow9IH4" target="_blank">
+                            <i class="fab fa-youtube"></i> Le métier de Game Designer - ICAN
+                        </a>
+                        <h3 class="source-description">Présentation du métier de game designer</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://www.youtube.com/watch?v=LP18QooqBMA" target="_blank">
+                            <i class="fab fa-youtube"></i> THE LIFE OF A VIDEO GAME PRODUCER - The Social Gaming
+                        </a>
+                        <h3 class="source-description">Rôle du producteur de jeu vidéo</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://www.youtube.com/watch?v=lqNQcDW7rmU" target="_blank">
+                            <i class="fab fa-youtube"></i> I Spent 2 Years Developing My Indie Game - JohnBrx
+                        </a>
+                        <h3 class="source-description">Développement d’un jeu vidéo indépendant</h3>
+                    </div>                                    
+                    <div class="source-item">
+                        <a href="https://www.youtube.com/watch?v=ChhYCujkMZ0" target="_blank">
+                            <i class="fab fa-youtube"></i> A Day In The Life of a QA Tester at a Software Development Company - Fireship
+                        </a>
+                        <h3 class="source-description">Une journée dans la peau d’un testeur QA</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Catégorie Galerie -->
+            <div class="source-category">
+                <h3><i class="fas fa-images" style="margin: 1rem 0"></i> Galerie</h3>
+                <div class="source-grid">
+                    <div class="source-item">
+                        <a href="https://paris.ubisoft.com/en/our-studio/about-us/?doing_wp_cron=1745574543.3149769306182861328125" target="_blank">
+                            <i class="fas fa-image"></i> Ubisoft Paris
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://yzentertainment.wordpress.com/2011/11/13/final-project-production-pipeline/" target="_blank">
+                            <i class="fas fa-image"></i> Pipeline de production
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://dev.epicgames.com/documentation/fr-fr/unreal-engine/unreal-engine-material-editor-ui" target="_blank">
+                            <i class="fas fa-image"></i> Unreal Engine – Material Editor UI
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://unreal-mmo-dev.com/2023/05/11/40-how-to-make-a-good-backend-for-your-mmo-game-and-unreal-engine/" target="_blank">
+                            <i class="fas fa-image"></i> Backend pour MMO avec Unreal Engine
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://dreamfarmstudios.com/blog/game-art-styles-with-guide/" target="_blank">
+                            <i class="fas fa-image"></i> Styles graphiques dans les jeux vidéo
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://www.behance.net/gallery/77389365/CHARACTER-DESIGN-Videogame" target="_blank">
+                            <i class="fas fa-image"></i> Character Design
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://kreonit.com/idea-generation-and-game-design/level-design-for-beginners/" target="_blank">
+                            <i class="fas fa-image"></i> Level Design pour débutants
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://www.stuff.tv/review/app-of-the-week-procreate-5-for-ipad-review/" target="_blank">
+                            <i class="fas fa-image"></i> Procreate 5
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://www.prweb.com/releases/image_line_software_announces_fl_studio_12_music_production_software_with_lifetime_updates_included/prweb12627890.html" target="_blank">
+                            <i class="fas fa-image"></i> FL Studio 12
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://dribbble.com/shots/14032320-UI-Elements-Components-UX-UI-Design" target="_blank">
+                            <i class="fas fa-image"></i> Éléments UI – UX/UI Design
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://apollositiweb.com/ux-designer-web-sito-internet/" target="_blank">
+                            <i class="fas fa-image"></i> UX Design – Création de sites
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>
+                    
+                    <div class="source-item">
+                        <a href="https://saspeakblog.blob.core.windows.net/berayalen/great-ux-design-websites.html" target="_blank">
+                            <i class="fas fa-image"></i> Exemples de bons UX Design
+                        </a>
+                        <h3 class="source-description">Image d'illustration</h3>
+                    </div>                    
+                </div>
+            </div>
+            
+            <!-- Catégorie Articles et Ressources -->
+            <div class="source-category">
+                <h3><i class="fas fa-book-open" style="margin: 1rem 0"></i> Articles et Ressources</h3>
+                <div class="source-grid">
+                    <div class="source-item">
+                        <a href="https://www.gamasutra.com" target="_blank">
+                            <i class="fas fa-book"></i> Gamasutra
+                        </a>
+                        <h3 class="source-description">Référence incontournable pour les professionnels du jeu vidéo : design, dev, marketing.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://www.gamechoiceawards.com" target="_blank">
+                            <i class="fas fa-book"></i> Game Developer’s Choice Awards
+                        </a>
+                        <h3 class="source-description">Récompenses des meilleurs jeux vidéo, une vitrine des métiers du secteur.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://docs.unrealengine.com" target="_blank">
+                            <i class="fas fa-book"></i> Unreal Engine Documentation
+                        </a>
+                        <h3 class="source-description">Documentation officielle du moteur Unreal Engine, pour les développeurs et techniciens.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://www.blenderguru.com" target="_blank">
+                            <i class="fas fa-book"></i> Blender Guru
+                        </a>
+                        <h3 class="source-description">Tutoriels pour apprendre le modeling et l'animation 3D avec Blender.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://gamingcampus.fr/metiers/" target="_blank">
+                            <i class="fas fa-book"></i> Gaming Campus – Fiches Métiers
+                        </a>
+                        <h3 class="source-description">Plus de 140 fiches métiers du jeu vidéo, avec descriptions et interviews.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://rubika-edu.ca/metiers-jeux-video/" target="_blank">
+                            <i class="fas fa-book"></i> Rubika – Les métiers du jeu vidéo
+                        </a>
+                        <h3 class="source-description">Panorama des métiers du jeu vidéo, salaires et évolutions de carrière.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://game-sup.fr/tout-savoir-sur-metier-game-designer/" target="_blank">
+                            <i class="fas fa-book"></i> Game Sup – Game Designer
+                        </a>
+                        <h3 class="source-description">Un article pour tout comprendre sur le métier de game designer.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://www.creajeux.fr/lexique-metiers-jeux-videos/#" target="_blank">
+                            <i class="fas fa-book"></i> Créajeux – Lexique des métiers
+                        </a>
+                        <h3 class="source-description">Un dictionnaire illustré des métiers du jeu vidéo, très pédagogique.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://www.letudiant.fr/metiers/secteur/jeu-video.html" target="_blank">
+                            <i class="fas fa-book"></i> L’Étudiant – Métiers du jeu vidéo
+                        </a>
+                        <h3 class="source-description">Vue d’ensemble des métiers par catégorie (création, test, production…).</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://womeningamesfrance.org/project/testeur-euse-qa/" target="_blank">
+                            <i class="fas fa-book"></i> Women in Games – Testeur·euse QA
+                        </a>
+                        <h3 class="source-description">Zoom sur le métier de QA tester et son importance dans la qualité du jeu.</h3>
+                    </div>
+                    <div class="source-item">
+                        <a href="https://www.cnc.fr/jeu-video/actualites/sound-designer-un-createur-dambiances-sonores_1030679" target="_blank">
+                            <i class="fas fa-book"></i> CNC – Sound Designer
+                        </a>
+                        <h3 class="source-description">Le rôle du sound designer dans l'immersion et l’ambiance sonore du jeu.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <footer>
