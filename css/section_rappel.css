@@ -1,0 +1,96 @@
+/* Section "Pour rappel" */
+  #rappel {
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+    animation: slideIn 0.5s ease-in-out;
+    background: #fffbe6;
+    border-radius: 25px;
+    border: 4px solid #f5ca48;
+    box-shadow:
+      #ffe06680 5px 5px,
+      #ffd6a554 10px 10px,
+      #ffb84d33 15px 15px,
+      #fff2cc2e 20px 20px;
+  }
+
+  #rappel h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e69500;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #rappel h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #e69500;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  #rappel i {
+    color: #e69500;
+    font-size: 1.3em;
+  }
+
+  #rappel strong {
+    color: #e69500;
+    font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    #rappel {
+      padding: 20px 6px;
+      font-size: 1rem;
+    }
+    #rappel h2 {
+      font-size: 1.18rem;
+    }
+  }
+
+  #rappel blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #fff5c3;
+    border-left: 5px solid #ffd966;
+    font-style: italic;
+    color: #a97a13;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow:
+      #ffe06680 4px 4px,
+      #ffd6a554 7px 7px,
+      #ffb84d33 10px 10px;
+  }
+
+  #rappel .img-style {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 480px;
+    border-radius: 25px;
+    margin: 1.5rem auto;
+    border: 4px solid #f5ca48;
+    object-fit: contain;
+    background: #fffbe6;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  #rappel .img-style:hover {
+    transform: translateY(-7px);
+    box-shadow:
+    #ffe06680 0px 7px,
+    #ffb84d33 0px 14px,
+    #fff2cc2e 0px 21px;
+  }

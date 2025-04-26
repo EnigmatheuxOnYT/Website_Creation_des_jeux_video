@@ -1,0 +1,187 @@
+/* Timeline verticale pour les dates */
+  .vertical-timeline {
+    position: relative;
+    margin: 40px auto;
+    padding-left: 36px;
+    max-width: 700px;
+  }
+  
+  .vtimeline-line {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+    z-index: 0;
+  }
+  
+  .vtimeline-event {
+    position: relative;
+    margin-bottom: 38px;
+    min-height: 60px;
+    display: flex;
+    align-items: flex-start;
+    animation: fadeInUp 0.7s cubic-bezier(.4,1.4,.7,1) both;
+  }
+  
+  .vtimeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--surface-color);
+    border: 3px solid var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    left: -23px;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 8px #2a8c5e22;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  
+  .vtimeline-event:hover .vtimeline-dot {
+    background: var(--accent-color);
+    border-color: var(--primary-color);
+  }
+  
+  .vtimeline-date {
+    min-width: 80px;
+    margin-left: 30px;
+    margin-top: 0px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.18rem;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px 0 #e3f6ed;
+    flex-shrink: 0;
+  }
+  
+  .vtimeline-content {
+    background: var(--surface-color);
+    border: 1.5px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-left: 20px;
+    box-shadow: 0 2px 8px #27a06711;
+    flex: 1 1 0;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    position: relative;
+  }
+  
+  .vtimeline-event:hover .vtimeline-content {
+    transform: scale(1.05) translateY(-2px);
+    border-color: var(--accent-color);
+    box-shadow:
+    #5ca88459 3px 3px,
+    #27a06747 8px 8px,
+    #2a8c5e2e 13px 13px,
+    #96dcb921 18px 18px;
+  }
+  
+  .vtimeline-content strong {
+    color: var(--secondary-color);
+    font-size: 1.08rem;
+  }
+  
+  .vtimeline-content p {
+    margin: 6px 0 0 0;
+    color: var(--text-color);
+    font-size: 1.01rem;
+  }
+  
+  @media (max-width: 600px) {
+    .vertical-timeline {
+      padding-left: 20px;
+    }
+    .vtimeline-date {
+      font-size: 1rem;
+      min-width: 60px;
+    }
+    .vtimeline-content {
+      padding: 10px 10px;
+      font-size: 0.97rem;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    
+  /* Tableau moderne et responsive */
+  .modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px #00000070;
+    font-family: var(--font-family);
+  }
+  
+  .modern-table th,
+  .modern-table td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--text-color);
+    border-bottom: 1px solid #cde2d8;
+  }
+  
+  .modern-table th {
+    background-color: #65b390;
+    color: #ffffff;
+    border-bottom: 2px solid #4fa077;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .modern-table td {
+    border-right: 1px solid #cde2d8;
+  }
+  
+  .modern-table th:last-child,
+  .modern-table td:last-child {
+    border-right: none;
+  }
+  
+  .modern-table tbody tr:nth-child(even) {
+    background-color: #f4fdf8;
+  }
+  
+  .modern-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .modern-table tbody tr:hover {
+    background-color: #d9f0e6;
+    transform: translateY(-2px);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  .modern-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .modern-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+  }
+  
+  .modern-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+  }
+  
+  @media (max-width: 600px) {
+    .modern-table th,
+    .modern-table td {
+      padding: 12px 16px;
+      font-size: 0.85rem;
+    }
+  }

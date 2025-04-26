@@ -1,0 +1,46 @@
+/* Player pour les musiques avec un poster d'illustration */
+  .player {
+    width: 350px;
+    background: #caf3df;
+    margin: 20px auto;
+    margin-bottom: 30px;
+    padding: 30px 20px 15px 20px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  .player:hover {
+    transform: translateY(-7px);
+    box-shadow:
+    #5ca8854f 0px 7px,
+    #27a06746 0px 14px,
+    #2a8c5e14 0px 21px;
+  }
+  
+  .player:active {
+    transform: translateY(2px);
+  }
+  
+  .poster_musique img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 20px;
+    transition: transform var(--transition-speed);
+  }
+  
+  .player audio {
+    width: 100%;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    transition: box-shadow var(--transition-speed);
+  }
+  
+  .player audio:focus {
+    box-shadow: 0 0 10px var(--accent-color);
+  }

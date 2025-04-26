@@ -1,0 +1,135 @@
+/* Vidéos */
+  .video-container {
+    max-width: 800px;
+    margin: 10px auto 20px;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 480px;
+    border: 4px solid var(--secondary-color);
+    border-radius: 25px;
+    object-fit: cover;
+  }
+  
+  .video-caption {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 1.5em;
+    color: var(--text-color);
+  }
+  
+/* Images (avec une hauteur commune !) */
+  .img-style {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 480px; /* oblige une hauteur commune à toutes les images */
+    border-radius: 25px;
+    margin: 1.5rem auto;
+    border: 4px solid #2a8c5e;
+    object-fit: contain;
+    background: #e3f6ed;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  .img-style:hover {
+    transform: translateY(-7px);
+    box-shadow:
+    #5ca8854f 0px 7px,
+    #27a06746 0px 14px,
+    #2a8c5e14 0px 21px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .modal:target {
+    display: block;
+  }
+  
+  .modal-content {
+    height: 88vh;
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
+    border-radius: 25px;
+    box-shadow: 0 0 25px #00000070;
+    display: block;
+    margin: auto;
+  }
+  
+/* CROIX FERMETURE */
+  .close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: var(--surface-color);
+    color: var(--secondary-color);
+    padding: 4px 20px;
+    border-radius: 25px;
+    border: 2px solid var(--accent-color);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  .close-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow:
+      #1c81545e 2px 2px,
+      #1c975e2a 5px 5px,
+      #21b97249 8px 8px;
+    transform: scale(1.03);
+  }
+
+/* Slider d’images vintage */
+  .image-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 10px 0 20px;
+    margin-bottom: 20px;
+    scrollbar-width: thin;
+    cursor: grab;
+    scrollbar-color: var(--primary-color) transparent;
+  }
+  
+  .image-slider::-webkit-scrollbar {
+    height: 10px;
+  }
+  .image-slider::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .image-slider::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+  }
+  
+  .image-slider img {
+    height: 320px;
+    flex-shrink: 0;
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .image-slider img:hover {
+    transform: scale(1.03);
+    box-shadow:
+    #5ca8856c 0px 4px,
+    #27a06746 0px 7px,
+    #2a8c5e34 0px 10px;
+  }

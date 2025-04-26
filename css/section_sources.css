@@ -1,0 +1,108 @@
+/* Section sources */
+  #sources {
+    padding: 40px 20px;
+    margin: 30px auto;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    animation: slideIn 0.5s ease-in-out;
+    background: #fbeafb;
+    border-radius: 25px;
+    border: 4px solid #8e428f;
+    box-shadow:
+      #a24ca368 5px 5px,
+      #c857c879 10px 10px,
+      #c857c83d 15px 15px,
+      #dc8add27 20px 20px;
+  }
+  
+  #sources h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b347b3;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  #sources h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #a24ca3;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  #sources p,
+  #sources .source-description {
+    font-size: 1.08rem;
+    margin-bottom: 15px;
+    color: #4f2f53;
+  }
+  
+  #sources .source-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  #sources .source-item {
+    background: #f4dbf7;
+    padding: 20px;
+    border: 2px solid #d2a2eb;
+    border-radius: 15px;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  #sources .source-item:hover {
+    background: #ebc9f2;
+    box-shadow:
+      #a24ca331 0px 5px,
+      #c857c848 0px 10px,
+      #c857c81f 0px 15px;
+    transform: translateY(-5px);
+  }
+  
+  #sources .source-item a {
+    color: #a24ca3;
+    text-decoration: none;
+    font-size: 1.08rem;
+    transform: translateY(-5px);
+  }
+  
+  #sources .source-item a:hover {
+    color: #4f2f53;
+    transform: translateY(-5px);
+  }
+  
+  #sources .source-category h3 {
+    color: #84317c;
+    margin-bottom: 0.5em;
+  }
+  
+  #sources .source-category i {
+    color: #c57adb;
+  }
+  
+  /* Citations */
+  blockquote {
+    margin: 20px 0;
+    font-style: italic;
+    background: #caf3df;
+    padding: 15px 20px;
+    border-left: 5px solid var(--primary-color);
+    margin-top: 20px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow:
+    #5ca88421 4px 4px,
+    #27a06719 7px 7px,
+    #2a8c5e14 10px 10px;
+  }

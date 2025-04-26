@@ -1,0 +1,25 @@
+/* Footer */
+  footer {
+    background: var(--surface-color);
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid var(--primary-color);
+    animation: fadeIn 1s ease-in-out;
+    font-size: 1rem;
+  }
+  
+  footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+  }
+  
+  footer a:hover {
+    color: var(--secondary-color);
+  }
+
+/* Petit texte */
+  .little-text{
+    color: #5ca884;
+    font-size:0.9rem;
+  }
