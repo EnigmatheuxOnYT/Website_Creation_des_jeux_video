@@ -25,14 +25,26 @@
 
     <section id="rappel">
         <h2><i class="fa-solid fa-brain"></i> Petit rappel</h2>
+
         <p>
             Avant d’avoir un Mario qui saute ou un Creeper qui explose dans ton écran, il y a tout un process (parfois épique) derrière. 
             Non, un jeu ne sort pas d’un micro-ondes “réchauffe-moi un AAA”. Découvre ici toutes les grandes étapes, les métiers, les outils, et les secrets de la création d’un jeu vidéo moderne.
         </p>
+
         <blockquote>
             Le schéma ci-dessous <i class="fa-solid fa-arrow-circle-down"></i> illustre les grandes étapes de la création d’un jeu vidéo, de l’idée à la sortie.
         </blockquote>
-        <img class="img-style" src="images/key_moments_games.png" alt="Schéma du processus de création d'un jeu vidéo">
+
+        <!-- Image cliquable -->
+        <span id="keymomentsgames-anchor"></span>
+        <a href="#keymomentsgames-modal">
+            <img src="images/key_moments_games.png" alt="Schéma du processus de création d'un jeu vidéo" class="img-style">
+        </a>
+        <div id="keymomentsgames-modal" class="modal">
+            <a href="#keymomentsgames-anchor" class="close-btn">&times;</a>
+            <img src="images/key_moments_games.png" alt="Schéma du processus de création d'un jeu vidéo agrandie" class="modal-content">
+        </div>
+
         <blockquote>
             <i class="fa-solid fa-quote-left"></i> Un jeu vidéo, c’est comme un iceberg : 10% visible, 90% de boulot en coulisses.
             <br>— Capucine Bertin, une professionnelle de l'animation
@@ -55,7 +67,15 @@
             Ce schéma regroupe toutes nos idées, contraintes et réflexions autour du projet <strong>Kage no Michi</strong> : jeu ou utilitaire ? Références ? Limitations techniques ? C’est sur cette base que notre aventure a officiellement commencé.
         </blockquote>
 
-        <img class="img-style" src="images/brainstorm_gamedev.png" alt="Brainstorming pour un concept de jeu vidéo">
+        <!-- Image cliquable -->
+        <span id="brainstormgamedev-anchor"></span>
+        <a href="#brainstormgamedev-modal">
+            <img src="images/brainstorm_gamedev.png" alt="Brainstorming pour un concept de jeu vidéo" class="img-style">
+        </a>
+        <div id="brainstormgamedev-modal" class="modal">
+            <a href="#brainstormgamedev-anchor" class="close-btn">&times;</a>
+            <img src="images/brainstorm_gamedev.png" alt="Brainstorming pour un concept de jeu vidéo agrandie" class="modal-content">
+        </div>
 
         <blockquote>
             <i class="fa-solid fa-quote-left"></i> Les brainstormings sont souvent à l’origine des concepts les plus fous… et parfois des plus grands succès.
@@ -77,7 +97,15 @@
             On y trouve aussi <strong>une description du public cible</strong> (âge, types de joueurs...), <strong>une mini-analyse de la concurrence</strong> pour se situer sur le marché, et parfois même <strong>les premiers croquis ou un moodboard d’ambiance</strong> pour donner le ton visuel.
         </p>        
 
-        <img class="img-style" src="images/moodboard_gamedev.png" alt="Moodboard d'inspiration pour un jeu vidéo">
+        <!-- Image cliquable -->
+        <span id="moodboardgamedev-anchor"></span>
+        <a href="#moodboardgamedev-modal">
+            <img src="images/moodboard_gamedev.png" alt="Moodboard d'inspiration pour un jeu vidéo" class="img-style">
+        </a>
+        <div id="moodboardgamedev-modal" class="modal">
+            <a href="#moodboardgamedev-anchor" class="close-btn">&times;</a>
+            <img src="images/moodboard_gamedev.png" alt="Moodboard d'inspiration pour un jeu vidéo agrandie" class="modal-content">
+        </div>
 
         <blockquote>
             Ce moodboard <i class="fa-solid fa-arrow-circle-up"></i>, conçu par Maarten, pose les bases artistiques d’un jeu en vue à la troisième personne sur PS Vita.
@@ -88,6 +116,7 @@
             <strong>Le savais-tu ?</strong> De nombreux jeux cultes sont nés lors de <em>game jams</em>, ces concours où les développeurs n’ont que 48 heures pour créer un prototype. Des titres comme <strong>Celeste</strong> ou <strong>Superhot</strong> viennent de là !
         </p>
         
+        <!-- Vidéo -->
         <div class="video-container">
             <video controls poster="images/gamejam_poster.jpg">
                 <source src="videos/game_jam_timelapse.mp4" type="video/mp4">
@@ -123,6 +152,7 @@
             <i class="fa-solid fa-quote-left"></i> Avant de coder, beaucoup de studios testent leurs idées sur papier ou avec des Lego !
         </blockquote>
 
+        <!-- Vidéo -->
         <div class="video-container">
             <video controls poster="images/paper_prototype.png">
                 <source src="videos/paper_prototype.mp4" type="video/mp4">
@@ -150,6 +180,7 @@
             <strong>Exemple :</strong> <em>Celeste</em> est un super cas d’école : chaque écran du jeu est conçu pour être exigeant, mais jamais frustrant. Les développeurs ont ajusté chaque saut, chaque plateforme, à travers des centaines d’itérations pour offrir un challenge juste.
         </p>
 
+        <!-- Vidéo -->
         <div class="video-container">
             <video controls poster="images/celeste_leveldesign.png">
                 <source src="videos/celeste_level_design.mp4" type="video/mp4">
@@ -196,14 +227,30 @@
             Enfin, l'<strong>animation</strong> peut être fluide et réaliste grâce à la motion capture, ou au contraire volontairement exagérée et dessinée à la main pour un style plus expressif.
         </p>        
 
-        <img class="img-style" src="images/concept_art_hollowknight.jpg" alt="Concept art de Hollow Knight">
+        <!-- Image cliquable -->
+        <span id="conceptarthollowknight-anchor"></span>
+        <a href="#conceptarthollowknight-modal">
+            <img src="images/concept_art_hollowknight.jpg" alt="Concept art de Hollow Knight" class="img-style">
+        </a>
+        <div id="conceptarthollowknight-modal" class="modal">
+            <a href="#conceptarthollowknight-anchor" class="close-btn">&times;</a>
+            <img src="images/concept_art_hollowknight.jpg" alt="Concept art de Hollow Knight agrandie" class="modal-content">
+        </div>
 
         <blockquote>
             Ci-dessus <i class="fa-solid fa-arrow-circle-up"></i>, un concept art du jeu <em>Hollow Knight</em> réalisé par Hollowknightparrot.
             Ces dessins servent à poser les bases de l’univers visuel et à explorer différentes directions artistiques avant même de produire les assets du jeu.
         </blockquote>
 
-        <img class="img-style" src="images/motion_capture.jpg" alt="Démonstration de motion capture pour l’animation d’un personnage 3D">
+        <!-- Image cliquable -->
+        <span id="motioncapture-anchor"></span>
+        <a href="#motioncapture-modal">
+            <img src="images/motion_capture.jpg" alt="Démonstration de motion capture pour l’animation d’un personnage 3D" class="img-style">
+        </a>
+        <div id="motioncapture-modal" class="modal">
+            <a href="#motioncapture-anchor" class="close-btn">&times;</a>
+            <img src="images/motion_capture.jpg" alt="Démonstration de motion capture pour l’animation d’un personnage 3D agrandie" class="modal-content">
+        </div>
 
         <blockquote>
             <i class="fa-solid fa-quote-left"></i> La motion capture permet de reproduire des mouvements humains avec un réalisme bluffant. C’est souvent utilisé dans les jeux AAA pour donner plus de vie aux personnages.
@@ -215,6 +262,7 @@
             Côté audio, les développeurs ont aussi enregistré leurs propres sons pour coller parfaitement à l’ambiance sombre et immersive de leur univers.
         </p>
 
+        <!-- Vidéo -->
         <div class="video-container">
             <video controls poster="images/sound_design_minecraft.jpg">
                 <source src="videos/sound_design_minecraft.mp4" type="video/mp4">
@@ -258,7 +306,15 @@
             <strong>Versionning</strong> : des outils comme Git permettent de garder une trace de chaque modification. Pratique pour revenir en arrière en cas de pépin !
         </p>        
 
-        <img class="img-style" src="images/dev_setup.jpg" alt="Poste de travail développeur jeu vidéo">
+        <!-- Image cliquable -->
+        <span id="devsetup-anchor"></span>
+        <a href="#devsetup-modal">
+            <img src="images/dev_setup.jpg" alt="Poste de travail développeur jeu vidéo" class="img-style">
+        </a>
+        <div id="devsetup-modal" class="modal">
+            <a href="#devsetup-anchor" class="close-btn">&times;</a>
+            <img src="images/dev_setup.jpg" alt="Poste de travail développeur jeu vidéo agrandie" class="modal-content">
+        </div>
 
         <blockquote>
             <i class="fa-solid fa-quote-left"></i> Un setup de développeur, c’est souvent deux écrans, beaucoup de café… et une armée de post-its.
@@ -268,6 +324,7 @@
             <strong>Langages utilisés :</strong> selon le moteur, on peut coder en C# (Unity), C++ (Unreal), GDScript (Godot), Python, Lua, JavaScript… Chaque langage a ses particularités, et les développeurs jonglent souvent avec plusieurs à la fois.
         </p>
 
+        <!-- Vidéo -->
         <div class="video-container">
             <video controls poster="images/unity_engine.png">
                 <source src="videos/unity_demo.mp4" type="video/mp4">
@@ -281,7 +338,15 @@
             <br>— un utilisateur de Reddit
         </blockquote>
 
-        <img class="img-style" src="images/git_versionning.png" alt="Gestion de version avec Git pour un projet">
+        <!-- Image cliquable -->
+        <span id="gitversionning-anchor"></span>
+        <a href="#gitversionning-modal">
+            <img src="images/git_versionning.png" alt="Gestion de version avec Git pour un projet" class="img-style">
+        </a>
+        <div id="gitversionning-modal" class="modal">
+            <a href="#gitversionning-anchor" class="close-btn">&times;</a>
+            <img src="images/git_versionning.png" alt="Gestion de version avec Git pour un projet agrandie" class="modal-content">
+        </div>
 
         <blockquote>
             <i class="fa-solid fa-quote-left"></i> La gestion de versions permet de ne jamais perdre son travail, même après une fausse manip.
@@ -310,7 +375,15 @@
             <i class="fa-solid fa-quote-left"></i> Les vrais tests commencent quand les joueurs prennent la manette. C’est là que tout s’éclaire... ou s’écroule.
         </blockquote>
 
-        <img class="img-style" src="images/players_review.png" alt="Catégories d'avis de joueurs de jeux vidéo">
+        <!-- Image cliquable -->
+        <span id="playersreview-anchor"></span>
+        <a href="#playersreview-modal">
+            <img src="images/players_review.png" alt="Catégories d'avis de joueurs de jeux vidéo" class="img-style">
+        </a>
+        <div id="playersreview-modal" class="modal">
+            <a href="#playersreview-anchor" class="close-btn">&times;</a>
+            <img src="images/players_review.png" alt="Catégories d'avis de joueurs de jeux vidéo agrandie" class="modal-content">
+        </div>
 
         <blockquote>
             Comme tu peux le voir sur le tableau ci-dessus <i class="fa-solid fa-arrow-circle-up"></i>, il s'agit d'une analyse statistique des types d’avis postés par les joueurs (source : Steam). On y apprend que :<br>
@@ -407,45 +480,51 @@
                     <div class="source-item">
                         <a href="https://youtu.be/dHMNeNapL1E" target="_blank">
                             <i class="fab fa-youtube"></i> Making Your First Game: Practical Rules – Extra Credits
+                            <h3 class="source-description">Conseils pratiques pour créer son premier jeu vidéo</h3>
                         </a>
-                        <h3 class="source-description">Conseils pratiques pour créer son premier jeu vidéo</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://www.youtube.com/watch?v=eYQZA6Bp3oc" target="_blank">
                             <i class="fab fa-youtube"></i> Les étapes de création d'un jeu vidéo – Benoît (VideoGameCreation)
+                            <h3 class="source-description">Tour d’horizon des étapes principales de création d’un jeu</h3>
                         </a>
-                        <h3 class="source-description">Tour d’horizon des étapes principales de création d’un jeu</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://www.youtube.com/watch?v=oJKRpqD1KSw" target="_blank">
                             <i class="fab fa-youtube"></i> Global Game Jam 2023 Timelapse – Alan Zucconi
+                            <h3 class="source-description">Plongée accélérée dans la création d’un jeu lors de la Global Game Jam 2023</h3>
                         </a>
-                        <h3 class="source-description">Plongée accélérée dans la création d’un jeu lors de la Global Game Jam 2023</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://vimeo.com/9202336" target="_blank">
                             <i class="fab fa-vimeo-v"></i> Prototype papier du jeu Paper Cakes
+                            <h3 class="source-description">Beaucoup de studios testent leurs idées sur papier avant de coder</h3>
                         </a>
-                        <h3 class="source-description">Beaucoup de studios testent leurs idées sur papier avant de coder</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://www.youtube.com/watch?v=hYGqiHl5YrA" target="_blank">
                             <i class="fab fa-youtube"></i> Celeste, une nouvelle façon de faire du platformer ? - Doc Geraud
+                            <h3 class="source-description">Analyse du jeu Celeste basant son level design sur son histoire</h3>
                         </a>
-                        <h3 class="source-description">Analyse du jeu Celeste basant son level design sur son histoire</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://www.youtube.com/watch?v=4XmJPb4Qt5Y" target="_blank">
                             <i class="fab fa-youtube"></i> HOW MINECRAFT SOUNDS ARE MADE - Minecraft
+                            <h3 class="source-description">Comment les SFX de Minecraft ont été réalisés</h3>
                         </a>
-                        <h3 class="source-description">Comment les SFX de Minecraft ont été réalisés</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://www.youtube.com/watch?v=iqlH4okiQqg" target="_blank">
                             <i class="fab fa-youtube"></i> Unity in 100 Seconds - Fireship
+                            <h3 class="source-description">Comprendre le fonctionnement de Unity en 100 secondes</h3>
                         </a>
-                        <h3 class="source-description">Comprendre le fonctionnement de Unity en 100 secondes</h3>
-                    </div>
+                    </div>                    
                 </div>
             </div>
             <!-- Catégorie Galerie -->
@@ -455,28 +534,51 @@
                     <div class="source-item">
                         <a href="https://www.switch-actu.fr/wp-content/uploads/2022/12/Comment-creer-un-jeu-video-Etapes-cles.png" target="_blank">
                             <i class="fas fa-image"></i> Schéma du processus de création d'un jeu vidéo
+                            <h3 class="source-description">Illustre les grandes étapes de la création d’un jeu vidéo (image d'illustration)</h3>
                         </a>
-                        <h3 class="source-description">Illustre les grandes étapes de la création d’un jeu vidéo</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://limitedpolys.blogspot.com/2012/03/moodboard-for-game.html" target="_blank">
                             <i class="fas fa-image"></i> Moodboard – Maarten
+                            <h3 class="source-description">Illustre l'inspiration visuelle et conceptuelle pour un jeu (image d'illustration)</h3>
                         </a>
-                        <h3 class="source-description">Illustre l'inspiration visuelle et conceptuelle pour un jeu</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://www.deviantart.com/hollowknightparrot/art/Hollow-Knight-concept-993217115" target="_blank">
                             <i class="fas fa-image"></i> Concept art - Hollowknightparrot
+                            <h3 class="source-description">Permet de donner vie à l’univers visuel du jeu (image d'illustration)</h3>
                         </a>
-                        <h3 class="source-description">Permet de donner vie à l’univers visuel du jeu</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://winfuture.de/videos/Spiele/FIFA-13-Motion-Capturing-7804.html" target="_blank">
                             <i class="fas fa-image"></i> FA 13 – Motion Capturing
+                            <h3 class="source-description">Reproduire des mouvements humains avec réalisme (image d'illustration)</h3>
                         </a>
-                        <h3 class="source-description">Eeproduire des mouvements humains avec réalisme</h3>
                     </div>
                     
+                    <div class="source-item">
+                        <a href="https://unity.com/fr/products/source-code" target="_blank">
+                            <i class="fas fa-image"></i> Unity Source Code
+                            <h3 class="source-description">Image d'illustration</h3>
+                        </a>
+                    </div>
+
+                    <div class="source-item">
+                        <a href="https://adejokeogundipe.medium.com/my-day-to-day-git-commands-d6cbc9d52ef0" target="_blank">
+                            <i class="fas fa-image"></i> My Day To Day Git Commands
+                            <h3 class="source-description">Image d'illustration</h3>
+                        </a>
+                    </div>
+
+                    <div class="source-item">
+                        <a href="https://www.numerama.com/pop-culture/367054-les-bugs-dans-les-jeux-video-moins-de-plaintes-quon-ne-pourrait-le-croire.html" target="_blank">
+                            <i class="fas fa-image"></i> Les bugs dans les jeux vidéo ?
+                            <h3 class="source-description">Image d'illustration</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
             <!-- Catégorie Articles et Ressources -->
@@ -486,75 +588,86 @@
                     <div class="source-item">
                         <a href="https://www.gamasutra.com/" target="_blank">
                             <i class="fas fa-book"></i> Gamasutra – Articles de devs
+                            <h3 class="source-description">Articles pro sur le game dev.</h3>
                         </a>
-                        <h3 class="source-description">Articles pro sur le game dev.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://docs.unity3d.com/Manual/index.html" target="_blank">
                             <i class="fas fa-book"></i> Documentation Unity
+                            <h3 class="source-description">Docs officielles du moteur Unity.</h3>
                         </a>
-                        <h3 class="source-description">Docs officielles du moteur Unity.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://godotengine.org/" target="_blank">
                             <i class="fas fa-book"></i> Godot Engine
+                            <h3 class="source-description">Moteur libre et open-source.</h3>
                         </a>
-                        <h3 class="source-description">Moteur libre et open-source.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://dev.epicgames.com/documentation/fr-fr/unreal-engine/unreal-engine-5-5-documentation" target="_blank">
                             <i class="fas fa-book"></i> Documentation Unreal Engine
+                            <h3 class="source-description">Docs complètes pour Unreal 5.5.</h3>
                         </a>
-                        <h3 class="source-description">Docs complètes pour Unreal 5.5.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://lahorde.tech/fiches-metier/directeur-artistique-jeux-video" target="_blank">
                             <i class="fas fa-book"></i> Directeur artistique – La Horde
+                            <h3 class="source-description">Fiche métier dans le jeu vidéo.</h3>
                         </a>
-                        <h3 class="source-description">Fiche métier dans le jeu vidéo.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://blog.lesjeudis.com/developpement-de-jeu-video" target="_blank">
                             <i class="fas fa-book"></i> Développement de jeu vidéo – Les Jeudis
+                            <h3 class="source-description">Introduction au métier de dev jeu vidéo.</h3>
                         </a>
-                        <h3 class="source-description">Introduction au métier de dev jeu vidéo.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://gamingcampus.fr/metiers/testeur-jeu-video.html" target="_blank">
                             <i class="fas fa-book"></i> Testeur de jeu vidéo – Gaming Campus
+                            <h3 class="source-description">Rôle et missions du testeur QA.</h3>
                         </a>
-                        <h3 class="source-description">Rôle et missions du testeur QA.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://starloopstudios.com/the-7-stages-of-game-development/" target="_blank">
                             <i class="fas fa-book"></i> 7 Stages of Game Dev – Starloop
+                            <h3 class="source-description">Les 7 étapes clés du dev de jeu.</h3>
                         </a>
-                        <h3 class="source-description">Les 7 étapes clés du dev de jeu.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://plaky.com/blog/stages-of-game-development/" target="_blank">
                             <i class="fas fa-book"></i> Stages of Game Dev – Plaky
+                            <h3 class="source-description">Vue simplifiée des étapes de dev.</h3>
                         </a>
-                        <h3 class="source-description">Vue simplifiée des étapes de dev.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://fr.wikipedia.org/wiki/D%C3%A9veloppement_de_jeux_vid%C3%A9o" target="_blank">
                             <i class="fab fa-wikipedia-w"></i> Développement de jeux vidéo – Wikipédia (FR)
+                            <h3 class="source-description">Page FR sur le game dev.</h3>
                         </a>
-                        <h3 class="source-description">Page FR sur le game dev.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://en.wikipedia.org/wiki/Video_game_development" target="_blank">
                             <i class="fab fa-wikipedia-w"></i> Video Game Development – Wikipedia (EN)
+                            <h3 class="source-description">Page EN avec définitions et étapes.</h3>
                         </a>
-                        <h3 class="source-description">Page EN avec définitions et étapes.</h3>
                     </div>
+                    
                     <div class="source-item">
                         <a href="https://www.numerama.com/pop-culture/367054-les-bugs-dans-les-jeux-video-moins-de-plaintes-quon-ne-pourrait-le-croire.html" target="_blank">
                             <i class="fas fa-book"></i> Les bugs dans les jeux vidéo – Numerama
+                            <h3 class="source-description">Une étude sur les avis rédigés par les joueurs.</h3>
                         </a>
-                        <h3 class="source-description">Une étude sur les avis rédigés par les joueurs.</h3>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -562,7 +675,7 @@
 
     <footer>
         <h2>Tu as des questions ou des idées à partager ?</h2>
-        <p>Pas de panique, garde-les pour toi👍. Je ne suis pas à l'écoute de tes retours. Tu ne peux pas m'envoyer un message via mon <a href="contact.html">formulaire de contact</a>.</p>
+        <p>Pas de panique, garde-les pour toi <i class="fa-solid fa-smile-beam"></i> . Je ne suis pas à l'écoute de tes retours. Tu ne peux pas m'envoyer un message via mon <a href="contact.html">formulaire de contact</a>.</p>
         <p class="little-text">Site réalisé avec <i class="fa-solid fa-heart"></i> et un peu trop de caféine (je bois pas de café).</p>
         <p class="little-text">&copy; 2025 Ahmed-Adam Rezkallah. Tous droits réservés.</p>
         <h3><a href="https://www.youtube.com/@enigmatheux" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a> <a href="https://github.com/EnigmatheuxOnYT/Kage_no_Michi" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a></h3>
