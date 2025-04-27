@@ -1,1 +1,1 @@
-// Le fichier js vierge pour le moment
+// Le fichier js est vierge pour le moment
