@@ -66,6 +66,7 @@
     font-weight: 700;
   }
 
+/* Style du bouton changé pour la section "transition" */
   /* Conteneur du bouton */
   .container {
     display: flex;

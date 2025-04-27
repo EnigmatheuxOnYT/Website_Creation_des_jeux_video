@@ -1,4 +1,4 @@
-/* Header compact au défilement */
+/* Header qui reste sticky lors du défilement */
   header {
     background: var(--surface-color);
     padding: 15px 20px;

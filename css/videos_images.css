@@ -41,6 +41,7 @@
     #2a8c5e14 0px 21px;
   }
 
+/* Système d'agrandissement d'images fonctionnel ! */
   .modal {
     display: none;
     position: fixed;
@@ -66,7 +67,7 @@
     margin: auto;
   }
   
-/* CROIX FERMETURE */
+/* CROIX FERMETURE LORS DE L'AGRANDISSEMENT DE L'IMAGE*/
   .close-btn {
     position: absolute;
     top: 40px;
@@ -92,7 +93,7 @@
     transform: scale(1.03);
   }
 
-/* Slider d’images vintage */
+/* Slider d’images */
   .image-slider {
     display: flex;
     overflow-x: auto;

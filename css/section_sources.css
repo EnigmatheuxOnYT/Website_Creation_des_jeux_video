@@ -88,21 +88,3 @@
   #sources .source-category i {
     color: #c57adb;
   }
-  
-  /* Citations */
-  blockquote {
-    margin: 20px 0;
-    font-style: italic;
-    background: #caf3df;
-    padding: 15px 20px;
-    border-left: 5px solid var(--primary-color);
-    margin-top: 20px;
-    border-top-right-radius: 18px;
-    border-bottom-right-radius: 18px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    box-shadow:
-    #5ca88421 4px 4px,
-    #27a06719 7px 7px,
-    #2a8c5e14 10px 10px;
-  }

@@ -56,7 +56,8 @@
       font-size: 1.18rem;
     }
   }
-  
+
+/* Style des blockquotes changé pour la section "recap" */
   #recap blockquote {
     margin: 20px 0;
     padding: 15px 20px;
@@ -74,6 +75,7 @@
       #5c8ddb1f 10px 10px;
   }
   
+/* Style des images changé pour la section "recap" */
   #recap .img-style {
     display: block;
     width: auto;
@@ -89,7 +91,8 @@
     object-fit: contain;
     background: #e8f1fa;
   }
-  
+
+/* Style du tableau changé pour la section "recap" */
   #recap .modern-table {
     width: 100%;
     border-collapse: collapse;
@@ -160,6 +163,7 @@
       }
   }
 
+/* Style de la timeline changé pour la section "recap" */
   #recap .timeline {
     position: relative;
     margin: 60px 0;
@@ -335,6 +339,7 @@
       }
   }
 
+/* Style des vidéos changé pour la section "recap" */
   #recap .video-container {
     max-width: 1200px;
     margin: 10px auto 20px;

@@ -90,6 +90,7 @@
     font-size: 1.01rem;
   }
   
+/* Responsive pour la timeline */
   @media (max-width: 600px) {
     .vertical-timeline {
       padding-left: 20px;
@@ -115,7 +116,7 @@
     }
   }
     
-  /* Tableau moderne et responsive */
+/* Tableau moderne*/
   .modern-table {
     width: 100%;
     border-collapse: collapse;
@@ -177,7 +178,8 @@
   .modern-table tbody tr:last-child td:last-child {
     border-bottom-right-radius: 12px;
   }
-  
+
+/* Responsive du tableau */
   @media (max-width: 600px) {
     .modern-table th,
     .modern-table td {
