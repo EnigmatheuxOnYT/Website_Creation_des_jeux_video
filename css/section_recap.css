@@ -200,9 +200,23 @@
   }
 
   #recap .timeline-event:hover {
-      transform: scale(1.1) translate(-50%, -50%);
-      background-color: #d1e3f6;
-      border-color: #3f6fa7;
+    transform: scale(1.1) translate(-50%, -50%);
+    background-color: #c0d4f7;
+    border-color: #2a4a7c;
+    box-shadow: 0 8px 15px rgba(46, 61, 73, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #recap .timeline-event a {
+      color: #3f6fa7;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+  #recap .timeline-event a:hover {
+      color: #1a3a6d;
+      text-decoration: underline;
   }
 
   #recap .timeline-event .year {
@@ -224,6 +238,7 @@
       letter-spacing: 0.5px;
   }
 
+/* Style  de la timeline verticale modifié pour la section "recap"*/
   #recap .vertical-timeline {
     position: relative;
     margin: 40px auto;

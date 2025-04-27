@@ -93,6 +93,19 @@
     font-weight: 700;
   }
   
+  /* Style général des liens */
+  section a {
+    color: #8a2956;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease, text-decoration var(--transition-speed) ease;
+  }
+
+  section a:hover {
+    color: #b93874;
+    text-decoration: underline;
+  }
+
 /* Animations */
   @keyframes fadeIn {
     from { opacity: 0; }
@@ -173,4 +186,8 @@
     #5ca88421 4px 4px,
     #27a06719 7px 7px,
     #2a8c5e14 10px 10px;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
