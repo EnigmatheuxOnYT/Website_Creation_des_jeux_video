@@ -90,21 +90,6 @@
     font-size: 1.01rem;
   }
   
-/* Responsive pour la timeline */
-  @media (max-width: 600px) {
-    .vertical-timeline {
-      padding-left: 20px;
-    }
-    .vtimeline-date {
-      font-size: 1rem;
-      min-width: 60px;
-    }
-    .vtimeline-content {
-      padding: 10px 10px;
-      font-size: 0.97rem;
-    }
-  }
-  
   @keyframes fadeInUp {
     from {
       opacity: 0;
