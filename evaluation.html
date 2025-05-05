@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Évaluation des connaissances sur le développement de jeux vidéo">
+  <title>Évaluation – Compréhension du site</title>
+  <!-- Liens vers les fichiers CSS -->
+  <link rel="stylesheet" href="css/section_global.css">
+  <link rel="stylesheet" href="css/section_rappel.css">
+  <link rel="stylesheet" href="css/section_recap.css">
+  <link rel="stylesheet" href="css/section_sources.css">
+  <link rel="stylesheet" href="css/section_transition.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/header_hero.css">
+  <link rel="stylesheet" href="css/timeline_tableau.css">
+  <link rel="stylesheet" href="css/videos_images.css">
+  <link rel="stylesheet" href="css/boutons.css">
+  <link rel="stylesheet" href="css/player_musique.css">
+  <link rel="stylesheet" href="css/evaluation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1><i class="fa-solid fa-trophy"></i> Le grand test</h1>
+            <nav>
+                <ul>
+                <li><a href="index.html" title="Accueil"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="histoire.html">L'Histoire du Jeu Vidéo</a></li>
+                <li><a href="conception.html">Comment naît un jeu vidéo ?</a></li>
+                <li><a href="metiers.html">Les métiers du jeu vidéo</a></li>
+                <li><a href="lancement.html">Le Lancement et après ?</a></li>
+                <li><a href="evaluation.html">Le grand test</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="evaluation-section" id="debut">
+        <h1>Quiz – As-tu vraiment exploré tout le site ?</h1>
+        
+        <p>
+            Attention... Voici LE quiz. Le boss final. L’épreuve ultime.  
+            Seuls les vrais, les sages, les aventurier·ères arriveront à en sortir indemnes.  
+            Ce quiz est (très) difficile. Genre vraiment. J'ai vu des gens pleurer (bon, pas vraiment... mais presque, bref passons).  
+            Lis bien chaque question, invoque ton cerveau, et tente de prouver que tu maîtrises ce site comme personne ! Bonne chance, tu vas en avoir besoin !
+        </p>
+
+        <h2>Hop hop hop, une petite pause !</h2>
+        <p>
+            Avant de te lancer dans le quiz, pourrais-tu prendre une minute pour partager ton <strong>avis</strong> sur ce site ?<br>
+            Tes retours sont précieux et m'aideront à l'améliorer pour toi et les autres !
+        </p>
+        <!-- Image cliquable -->
+        <span id="needyou-anchor"></span>
+        <a href="#needyou-modal">
+            <img src="images/i_need_you.jpg" alt="I need YOU" class="img-style">
+        </a>
+        <div id="needyou-modal" class="modal">
+            <a href="#needyou-anchor" class="close-btn">&times;</a>
+            <img src="images/i_need_you.jpg" alt="I need YOU" class="modal-content">
+        </div>
+
+        <!-- Section d'avis sur le site -->
+        <h2>Donne-moi ton avis</h2>
+        <div class="feedback-section">
+            <div class="form-group">
+                <label for="appreciation"><strong>Ce que tu as aimé :</strong></label>
+                <textarea id="appreciation" name="appreciation" rows="3" cols="60" required placeholder="Qu'as-tu apprécié ? (ex : design, facilité d'utilisation, contenu...)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="amelioration"><strong>Des idées pour améliorer le site ?</strong></label>
+                <textarea id="amelioration" name="amelioration" rows="3" cols="60" required placeholder="Propose tes suggestions ou points à améliorer..."></textarea>
+            </div>
+        </div>
+    
+        <!-- Séparateur visuel -->
+        <hr class="section-separator" />
+    
+        <!-- Section d'informations personnelles -->
+        <h2>Quelques infos sur toi</h2>
+        <div class="personal-info-section">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nom"><strong>Nom :</strong></label>
+                    <input type="text" id="nom" name="nom" required placeholder="Ex : Dupont">
+                </div>
+                <div class="form-group">
+                    <label for="prenom"><strong>Prénom :</strong></label>
+                    <input type="text" id="prenom" name="prenom" required placeholder="Ex : Dupont">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="classe"><strong>Classe :</strong></label>
+                    <input type="text" id="classe" name="classe" required placeholder="Ex : 1G7">
+                </div>
+                <div class="form-group">
+                    <label for="niveau"><strong>Niveau :</strong></label>
+                    <input type="text" id="niveau" name="niveau" required placeholder="Ex : Collège, Lycée...">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="email"><strong>E-mail :</strong></label>
+                    <input type="email" id="email" name="email" required placeholder="Ex : dupont.dupont@dupont.com">
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Section principale d'évaluation -->
+    <section class="evaluation-section">
+        <!-- Indicateur de progression du quiz -->
+        <div class="quiz-progress">
+            <div class="progress-bar">
+                <span class="progress-fill" id="progress-fill" style="width: 0%"></span>
+            </div>
+        </div>
+        
+        <h1>C'est parti !</h1>
+
+        <form id="evaluation-form" autocomplete="off">
+        <ol>
+            <!-- Question 1: QCM sur l'unicité du jeu vidéo -->
+            <!-- Caractéristiques fondamentales des jeux vidéo -->
+            <li>
+            <strong>QCM :</strong>
+            Qu'est-ce qui rend le jeu vidéo vraiment unique par rapport à un film ou un livre ?
+            <div class="qcm-choices">
+                <label>
+                  <input type="radio" name="q1" value="graphisme" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Son graphisme</span>
+                </label>
+                <label>
+                  <input type="radio" name="q1" value="interactivite" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Son interactivité</span>
+                </label>
+                <label>
+                  <input type="radio" name="q1" value="bande-son" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Sa bande-son</span>
+                </label>
+                <label>
+                  <input type="radio" name="q1" value="duree-vie" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Sa durée de vie</span>
+                </label>
+              </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 2: Vrai/Faux sur le développement de jeux -->
+            <!-- Développement de jeux -->
+            <li>
+            <h3>Vrai ou Faux :</h3>
+            Un jeu vidéo, ça se développe en quelques semaines grâce à des outils magiques et automatiques.
+            <div class="vrai-faux-group">
+                <label class="vrai-faux-btn vrai">
+                  <input type="radio" name="q2" value="vrai">
+                  Vrai
+                </label>
+                <label class="vrai-faux-btn faux">
+                  <input type="radio" name="q2" value="faux">
+                  Faux
+                </label>
+            </div>              
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 3: Question ouverte sur l'importance de l'idée de départ -->
+            <!-- Processus créatif et de conception -->
+            <li>
+            <strong>Ouverte :</strong>
+            Raconte en quelques mots pourquoi une idée de départ solide est si importante pour créer un bon jeu.
+            <br>
+            <textarea name="q3" rows="3" cols="60" placeholder="Explique en quoi une bonne idée de départ influence le développement d'un jeu..."></textarea>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 4: Question à relier sur les métiers du jeu vidéo -->
+            <!-- Rôles spécifiques dans l'industrie du jeu -->
+            <li>
+            <strong>À relier :</strong>
+            Relie chaque métier à sa mission principale :
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Métier</th>
+                        <th scope="col">Mission</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Game Designer</td>
+                        <td>
+                            <select name="q4a" aria-label="Mission du Game Designer">
+                                <option value="">Choisir...</option>
+                                <option value="A">Créer les effets sonores et la musique</option>
+                                <option value="B">Concevoir les règles et mécaniques du jeu</option>
+                                <option value="C">Imaginer les environnements et la progression</option>
+                                <option value="D">Programmer le comportement des PNJ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sound Designer</td>
+                        <td>
+                            <select name="q4b" aria-label="Mission du Sound Designer">
+                                <option value="">Choisir...</option>
+                                <option value="A">Créer les effets sonores et la musique</option>
+                                <option value="B">Concevoir les règles et mécaniques du jeu</option>
+                                <option value="C">Imaginer les environnements et la progression</option>
+                                <option value="D">Programmer le comportement des PNJ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Développeur IA</td>
+                        <td>
+                            <select name="q4c" aria-label="Mission du Développeur IA">
+                                <option value="">Choisir...</option>
+                                <option value="A">Créer les effets sonores et la musique</option>
+                                <option value="B">Concevoir les règles et mécaniques du jeu</option>
+                                <option value="C">Imaginer les environnements et la progression</option>
+                                <option value="D">Programmer le comportement des PNJ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Level Designer</td>
+                        <td>
+                            <select name="q4d" aria-label="Mission du Level Designer">
+                                <option value="">Choisir...</option>
+                                <option value="A">Créer les effets sonores et la musique</option>
+                                <option value="B">Concevoir les règles et mécaniques du jeu</option>
+                                <option value="C">Imaginer les environnements et la progression</option>
+                                <option value="D">Programmer le comportement des PNJ</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 5: Classement des étapes de développement -->
+            <!-- Cycle de développement d'un jeu -->
+            <li>
+                <strong>Classement :</strong>
+                Classe ces étapes du développement d'un jeu vidéo dans le bon ordre (de la première à la dernière) :
+                
+                <div class="sortable-container" id="dev-steps">
+                    <h3 class="drag-instruction"><i class="fas fa-expand-arrows-alt"></i>&nbsp;&nbsp; Glisse et dépose les éléments dans l'ordre correct</h3>
+                    
+                    <!-- Zone des éléments à glisser -->
+                    <div class="draggable-items">
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">Lancement</div>
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">Tests</div>
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">Idée / Concept</div>
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">Programmation</div>
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">Prototypage</div>
+                    </div>
+                    
+                    <!-- Zones de dépôt -->
+                    <div class="drop-zones-container">
+                        <div class="drop-zone" data-index="1" data-input="q5a" aria-label="Première étape" aria-dropeffect="none"></div>
+                        <div class="drop-zone" data-index="2" data-input="q5b" aria-label="Deuxième étape" aria-dropeffect="none"></div>
+                        <div class="drop-zone" data-index="3" data-input="q5c" aria-label="Troisième étape" aria-dropeffect="none"></div>
+                        <div class="drop-zone" data-index="4" data-input="q5d" aria-label="Quatrième étape" aria-dropeffect="none"></div>
+                        <div class="drop-zone" data-index="5" data-input="q5e" aria-label="Cinquième étape" aria-dropeffect="none"></div>
+                    </div>
+                    
+                    <!-- Champs cachés pour stocker les valeurs -->
+                    <input type="hidden" name="q5a" value="">
+                    <input type="hidden" name="q5b" value="">
+                    <input type="hidden" name="q5c" value="">
+                    <input type="hidden" name="q5d" value="">
+                    <input type="hidden" name="q5e" value="">
+                </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 6: QCM sur les moteurs de jeu -->
+            <!-- Outils de développement -->
+            <li>
+            <strong>QCM :</strong>
+            Quel moteur de jeu est super polyvalent, que ce soit pour de la 2D ou de la 3D ?
+            <div class="qcm-choices">
+                <label>
+                  <input type="radio" name="q6" value="rpgmaker" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">RPG Maker</span>
+                </label>
+                <label>
+                  <input type="radio" name="q6" value="unity" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Unity</span>
+                </label>
+                <label>
+                  <input type="radio" name="q6" value="excel" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Excel</span>
+                </label>
+                <label>
+                  <input type="radio" name="q6" value="photoshop" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Photoshop</span>
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 7: Vrai/Faux sur la phase de bêta-test -->
+            <!-- Processus de test -->
+            <li>
+            <h3>Vrai ou Faux ?</h3>
+            La phase de bêta-test, c'est juste pour voir si le jeu tourne sur l'ordi du développeur.
+            <div class="vrai-faux-group">
+                <label class="vrai-faux-btn vrai">
+                  <input type="radio" name="q7" value="vrai">
+                  Vrai
+                </label>
+                <label class="vrai-faux-btn faux">
+                  <input type="radio" name="q7" value="faux">
+                  Faux
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 8: Question ouverte sur les outils d'artistes -->
+            <!-- Outils de création artistique -->
+            <li>
+            <strong>Ouverte :</strong>
+            Donne deux outils utilisés par les artistes pour créer les visuels d'un jeu, et explique vite fait à quoi ils servent.
+            <br>
+            <textarea name="q8" rows="3" cols="60" placeholder="Nomme deux outils et explique leur utilité dans la création de visuels..."></textarea>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 9: QCM sur le rôle du Producer -->
+            <!-- Rôles de gestion de projet -->
+            <li>
+            <strong>QCM :</strong>
+            Le "Producer" (chef de projet), il fait quoi concrètement ?
+            <div class="qcm-choices">
+                <label>
+                  <input type="radio" name="q9" value="musique" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Compose la musique</span>
+                </label>
+                <label>
+                  <input type="radio" name="q9" value="planning" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Gère les plannings et coordonne l'équipe</span>
+                </label>
+                <label>
+                  <input type="radio" name="q9" value="scenario" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Écrit le scénario</span>
+                </label>
+                <label>
+                  <input type="radio" name="q9" value="animation" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Anime les personnages</span>
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 10: À relier sur les consoles et leurs innovations -->
+            <!-- Histoire des consoles de jeux -->
+            <li>
+            <strong>À relier :</strong>
+            Associe chaque console à son innovation phare :
+            <table class="modern-table">
+                <caption>Association des consoles avec leurs innovations principales</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Console</th>
+                        <th scope="col">Innovation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Magnavox Odyssey</td>
+                        <td>
+                            <select name="q10a" aria-label="Innovation de la Magnavox Odyssey">
+                                <option value="">Choisir...</option>
+                                <option value="A">Introduction du stick analogique</option>
+                                <option value="B">Première console domestique</option>
+                                <option value="C">Démocratisation de la 3D</option>
+                                <option value="D">Système de cartouches interchangeables</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Atari 2600</td>
+                        <td>
+                            <select name="q10b" aria-label="Innovation de l'Atari 2600">
+                                <option value="">Choisir...</option>
+                                <option value="A">Introduction du stick analogique</option>
+                                <option value="B">Première console domestique</option>
+                                <option value="C">Démocratisation de la 3D</option>
+                                <option value="D">Système de cartouches interchangeables</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PlayStation</td>
+                        <td>
+                            <select name="q10c" aria-label="Innovation de la PlayStation">
+                                <option value="">Choisir...</option>
+                                <option value="A">Introduction du stick analogique</option>
+                                <option value="B">Première console domestique</option>
+                                <option value="C">Démocratisation de la 3D</option>
+                                <option value="D">Système de cartouches interchangeables</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nintendo 64</td>
+                        <td>
+                            <select name="q10d" aria-label="Innovation de la Nintendo 64">
+                                <option value="">Choisir...</option>
+                                <option value="A">Introduction du stick analogique</option>
+                                <option value="B">Première console domestique</option>
+                                <option value="C">Démocratisation de la 3D</option>
+                                <option value="D">Système de cartouches interchangeables</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 11: QCM sur l'équilibrage dans le game design -->
+            <!-- Principes de game design -->
+            <li>
+            <strong>QCM :</strong>
+            À quoi sert vraiment l'équilibrage dans le game design ?
+            <div class="qcm-choices">
+                <label>
+                  <input type="radio" name="q11" value="graphismes" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Ajouter des graphismes</span>
+                </label>
+                <label>
+                  <input type="radio" name="q11" value="difficulte" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Ajuster la difficulté pour garder le jeu fun</span>
+                </label>
+                <label>
+                  <input type="radio" name="q11" value="longueur" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Rendre le jeu plus long</span>
+                </label>
+                <label>
+                  <input type="radio" name="q11" value="bugs" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Ajouter des bugs (pour le fun ?)</span>
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 12: Vrai/Faux sur les développeurs indépendants -->
+            <!-- Spécificités du développement indé -->
+            <li>
+            <h3>Vrai ou Faux ?</h3>
+            Les développeurs indé doivent souvent toucher à tout, contrairement aux grosses équipes.
+            <div class="vrai-faux-group">
+                <label class="vrai-faux-btn vrai">
+                  <input type="radio" name="q12" value="vrai">
+                  Vrai
+                </label>
+                <label class="vrai-faux-btn faux">
+                  <input type="radio" name="q12" value="faux">
+                  Faux
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 13: Question ouverte sur le testeur QA -->
+            <!-- Rôle du testing dans le développement -->
+            <li>
+            <strong>Ouverte :</strong>
+            En quoi consiste le boulot d'un testeur QA dans le développement d'un jeu ?
+            <br>
+            <textarea name="q13" rows="3" cols="60" placeholder="Explique les responsabilités d'un testeur d'assurance qualité..."></textarea>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 14: Classement chronologique des consoles -->
+            <!-- Histoire des consoles -->
+            <li>
+                <strong>Classement :</strong>
+                Classe ces consoles de la plus ancienne à la plus récente :
+                
+                <div class="sortable-container" id="console-steps">
+                    <h3 class="drag-instruction"><i class="fas fa-expand-arrows-alt"></i>&nbsp;&nbsp; Glisse et dépose les consoles dans l'ordre chronologique</h3>
+                    
+                    <!-- Zone des éléments à glisser -->
+                    <div class="draggable-items">
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">Nintendo Switch</div>
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">PlayStation</div>
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">Atari 2600</div>
+                        <div class="draggable-item" aria-grabbed="false" draggable="true">NES</div>
+                    </div>
+                    
+                    <!-- Zones de dépôt -->
+                    <div class="drop-zones-container">
+                        <div class="drop-zone" data-index="1" data-input="q14a" aria-label="Console la plus ancienne" aria-dropeffect="none"></div>
+                        <div class="drop-zone" data-index="2" data-input="q14b" aria-label="Deuxième console la plus ancienne" aria-dropeffect="none"></div>
+                        <div class="drop-zone" data-index="3" data-input="q14c" aria-label="Troisième console la plus ancienne" aria-dropeffect="none"></div>
+                        <div class="drop-zone" data-index="4" data-input="q14d" aria-label="Console la plus récente" aria-dropeffect="none"></div>
+                    </div>
+                    
+                    <!-- Champs cachés pour stocker les valeurs -->
+                    <input type="hidden" name="q14a" value="">
+                    <input type="hidden" name="q14b" value="">
+                    <input type="hidden" name="q14c" value="">
+                    <input type="hidden" name="q14d" value="">
+                </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+            
+            <!-- Question 15: QCM sur Space Invaders -->
+            <!-- Histoire des jeux d'arcade classiques -->
+            <li>
+            <strong>QCM :</strong>
+            Pourquoi Space Invaders a-t-il cartonné dans les salles d'arcade ?
+            <div class="qcm-choices">
+                <label>
+                  <input type="radio" name="q15" value="3D" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Des graphismes 3D</span>
+                </label>
+                <label>
+                  <input type="radio" name="q15" value="difficulte" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Une difficulté qui grimpe et la sauvegarde des scores</span>
+                </label>
+                <label>
+                  <input type="radio" name="q15" value="multijoueur" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Un mode multijoueur en ligne</span>
+                </label>
+                <label>
+                  <input type="radio" name="q15" value="realite-virtuelle" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">La réalité virtuelle</span>
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 16: Vrai/Faux sur le sound designer -->
+            <!-- Rôle du sound designer -->
+            <li>
+            <h3>Vrai ou Faux :</h3>
+            Le sound designer, il ne s'occupe que de la musique du jeu.
+            <div class="vrai-faux-group">
+                <label class="vrai-faux-btn vrai">
+                  <input type="radio" name="q16" value="vrai">
+                  Vrai
+                </label>
+                <label class="vrai-faux-btn faux">
+                  <input type="radio" name="q16" value="faux">
+                  Faux
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 17: Question ouverte sur les retours des joueurs -->
+            <!-- Importance du feedback post-lancement -->
+            <li>
+            <strong>Ouverte :</strong>
+            Pourquoi c'est super important d'analyser les retours des joueurs après la sortie d'un jeu ?
+            <br>
+            <textarea name="q17" rows="3" cols="60" placeholder="Explique l'importance du feedback des joueurs..."></textarea>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 18: À relier sur les outils et leurs usages -->
+            <!-- Connaissance des outils professionnels -->
+            <li>
+            <strong>À relier :</strong>
+            Associe chaque outil à son usage principal :
+            <table class="modern-table">
+                <caption class="visually-hidden">Association des outils de développement avec leurs usages</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Outil</th>
+                        <th scope="col">Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trello</td>
+                        <td>
+                            <select name="q18a" aria-label="Usage de Trello">
+                                <option value="">Choisir...</option>
+                                <option value="A">Gestion de versions et suivi du code</option>
+                                <option value="B">Composition musicale</option>
+                                <option value="C">Prototypage d'interfaces et design graphique</option>
+                                <option value="D">Organisation des tâches et gestion de projet</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Figma</td>
+                        <td>
+                            <select name="q18b" aria-label="Usage de Figma">
+                                <option value="">Choisir...</option>
+                                <option value="A">Gestion de versions et suivi du code</option>
+                                <option value="B">Composition musicale</option>
+                                <option value="C">Prototypage d'interfaces et design graphique</option>
+                                <option value="D">Organisation des tâches et gestion de projet</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>
+                            <select name="q18c" aria-label="Usage de Git">
+                                <option value="">Choisir...</option>
+                                <option value="A">Gestion de versions et suivi du code</option>
+                                <option value="B">Composition musicale</option>
+                                <option value="C">Prototypage d'interfaces et design graphique</option>
+                                <option value="D">Organisation des tâches et gestion de projet</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FL Studio</td>
+                        <td>
+                            <select name="q18d" aria-label="Usage de FL Studio">
+                                <option value="">Choisir...</option>
+                                <option value="A">Gestion de versions et suivi du code</option>
+                                <option value="B">Composition musicale</option>
+                                <option value="C">Prototypage d'interfaces et design graphique</option>
+                                <option value="D">Organisation des tâches et gestion de projet</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+
+            <!-- Question 19: QCM sur les lancements de jeux bâclés -->
+            <!-- Risques dans le lancement de jeux -->
+            <li>
+            <strong>QCM :</strong>
+            Quel est le gros risque d'un lancement de jeu bâclé, comme pour Cyberpunk 2077 ?
+            <div class="qcm-choices">
+                <label>
+                  <input type="radio" name="q19" value="dlc" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Trop de DLC</span>
+                </label>
+                <label>
+                  <input type="radio" name="q19" value="bugs" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Bugs majeurs et mauvaise réputation</span>
+                </label>
+                <label>
+                  <input type="radio" name="q19" value="bande-son" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Pas de bande-son</span>
+                </label>
+                <label>
+                  <input type="radio" name="q19" value="menus" />
+                  <span class="custom-radio"></span>
+                  <span class="choice-text">Menus sans couleurs</span>
+                </label>
+            </div>
+            </li>
+
+            <!-- Séparateur visuel -->
+            <hr class="section-separator" />
+            
+            <!-- Question 20: Question ouverte sur la diversité des métiers -->
+            <!-- Importance de la collaboration dans le développement -->
+            <li>
+            <strong>Ouverte :</strong>
+            À ton avis, pourquoi la diversité des métiers et le travail d'équipe sont-ils si importants pour réussir un jeu vidéo ?
+            <br>
+            <textarea name="q20" rows="3" cols="60" placeholder="Explique l'importance de la diversité des compétences et du travail collaboratif..."></textarea>
+            </li>
+        </ol>
+        
+        <!-- Bouton d'envoi -->
+        <div class="container">
+            <button type="submit">Envoyer mes réponses</button>
+        </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Tu as des questions ou des idées à partager&nbsp;?</h2>
+            <p>
+                Pas de panique, garde-les pour toi 
+                <i class="fa-solid fa-face-smile-beam" aria-hidden="true"></i>.
+                Je ne suis pas à l'écoute de tes retours. 
+                Tu <strong>ne peux pas</strong> m'envoyer un message via mon
+                <a href="contact.html">formulaire de contact</a>.
+            </p>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@enigmatheux" aria-label="YouTube" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i> YouTube&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href="https://github.com/EnigmatheuxOnYT/Kage_no_Michi" aria-label="GitHub" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href="https://discord.gg/Ywg6jESDMP" aria-label="Discord" target="_blank" rel="noopener">
+                    <i class="fab fa-discord"></i> Discord
+                </a>
+            </div>
+            <p class="little-text">
+                Site réalisé avec <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                et un peu trop de caféine (je bois pas de café).
+            </p>
+            <p class="little-text copyright">
+                &copy; 2025 Ahmed-Adam Rezkallah. Tous droits réservés (sauf ceux que j'ai oubliés).
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="js/evaluation.js"></script>
+</body>
+</html>
