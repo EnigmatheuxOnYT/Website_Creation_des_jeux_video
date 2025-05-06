@@ -95,12 +95,49 @@
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label for="classe"><strong>Classe :</strong></label>
-                    <input type="text" id="classe" name="classe" required placeholder="Ex : 1G7">
+                    <label for="classe">Classe :</label>
+                    <select name="classe" id="classe" required>
+                        <option value="">Sélectionne ta classe</option>
+                        <!-- 2G1 à 2G7 -->
+                        <optgroup label="2nde Générale">
+                            <option value="2G1">2G1</option>
+                            <option value="2G2">2G2</option>
+                            <option value="2G3">2G3</option>
+                            <option value="2G4">2G4</option>
+                            <option value="2G5">2G5</option>
+                            <option value="2G6">2G6</option>
+                            <option value="2G27">2G7</option>
+                        </optgroup>
+                        <!-- 1G1 à 1G7 -->
+                        <optgroup label="1ère Générale">
+                            <option value="1G1">1G1</option>
+                            <option value="1G2">1G2</option>
+                            <option value="1G3">1G3</option>
+                            <option value="1G4">1G4</option>
+                            <option value="1G5">1G5</option>
+                            <option value="1G6">1G6</option>
+                            <option value="1G7">1G7</option>
+                        </optgroup>
+                        <!-- Tle1 à Tle7 -->
+                        <optgroup label="Terminale">
+                            <option value="Tle1">Tle1</option>
+                            <option value="Tle2">Tle2</option>
+                            <option value="Tle3">Tle3</option>
+                            <option value="Tle4">Tle4</option>
+                            <option value="Tle5">Tle5</option>
+                            <option value="Tle6">Tle6</option>
+                            <option value="Tle7">Tle7</option>
+                        </optgroup>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="niveau"><strong>Niveau :</strong></label>
-                    <input type="text" id="niveau" name="niveau" required placeholder="Ex : Collège, Lycée...">
+                    <label for="niveau">Niveau :</label>
+                    <select name="niveau" id="niveau" required>
+                        <option value="">Sélectionne ton niveau</option>
+                        <option value="2nde">SNT</option>
+                        <option value="1ère">NSI Première</option>
+                        <option value="Terminale">NSI</option>
+                    </select>
                 </div>
             </div>
             <div class="form-row">
@@ -364,7 +401,7 @@
             <!-- Rôles de gestion de projet -->
             <li>
             <strong>QCM :</strong>
-            Le "Producer" (chef de projet), il fait quoi concrètement ?
+            Le "Producer", il fait quoi concrètement ?
             <div class="qcm-choices">
                 <label>
                   <input type="radio" name="q9" value="musique" />
@@ -473,11 +510,6 @@
                   <span class="choice-text">Ajouter des graphismes</span>
                 </label>
                 <label>
-                  <input type="radio" name="q11" value="difficulte" />
-                  <span class="custom-radio"></span>
-                  <span class="choice-text">Ajuster la difficulté pour garder le jeu fun</span>
-                </label>
-                <label>
                   <input type="radio" name="q11" value="longueur" />
                   <span class="custom-radio"></span>
                   <span class="choice-text">Rendre le jeu plus long</span>
@@ -486,6 +518,11 @@
                   <input type="radio" name="q11" value="bugs" />
                   <span class="custom-radio"></span>
                   <span class="choice-text">Ajouter des bugs (pour le fun ?)</span>
+                </label>
+                <label>
+                    <input type="radio" name="q11" value="difficulte" />
+                    <span class="custom-radio"></span>
+                    <span class="choice-text">Ajuster la difficulté pour garder le jeu fun</span>
                 </label>
             </div>
             </li>
@@ -568,14 +605,14 @@
             Pourquoi Space Invaders a-t-il cartonné dans les salles d'arcade ?
             <div class="qcm-choices">
                 <label>
+                    <input type="radio" name="q15" value="diff/sauvegarde" />
+                    <span class="custom-radio"></span>
+                    <span class="choice-text">Une difficulté qui grimpe et la sauvegarde des scores</span>
+                </label>
+                <label>
                   <input type="radio" name="q15" value="3D" />
                   <span class="custom-radio"></span>
                   <span class="choice-text">Des graphismes 3D</span>
-                </label>
-                <label>
-                  <input type="radio" name="q15" value="difficulte" />
-                  <span class="custom-radio"></span>
-                  <span class="choice-text">Une difficulté qui grimpe et la sauvegarde des scores</span>
                 </label>
                 <label>
                   <input type="radio" name="q15" value="multijoueur" />
@@ -706,14 +743,14 @@
                   <span class="choice-text">Trop de DLC</span>
                 </label>
                 <label>
-                  <input type="radio" name="q19" value="bugs" />
-                  <span class="custom-radio"></span>
-                  <span class="choice-text">Bugs majeurs et mauvaise réputation</span>
-                </label>
-                <label>
                   <input type="radio" name="q19" value="bande-son" />
                   <span class="custom-radio"></span>
                   <span class="choice-text">Pas de bande-son</span>
+                </label>
+                <label>
+                    <input type="radio" name="q19" value="bugs" />
+                    <span class="custom-radio"></span>
+                    <span class="choice-text">Bugs majeurs et mauvaise réputation</span>
                 </label>
                 <label>
                   <input type="radio" name="q19" value="menus" />

@@ -1,38 +1,36 @@
-// evaluation.js
-
 // Barème des réponses correctes (pour les questions fermées)
 const correctAnswers = {
-  q1: 'B',
+  q1: 'interactivite',
   q2: 'faux',
   q4a: 'B',
   q4b: 'A',
   q4c: 'D',
   q4d: 'C',
-  q5a: 'Idée / Concept',
-  q5b: 'Prototypage',
-  q5c: 'Programmation',
-  q5d: 'Tests',
-  q5e: 'Lancement',
-  q6: 'B',
+  q5a: 'idee / concept',
+  q5b: 'prototypage',
+  q5c: 'programmation',
+  q5d: 'tests',
+  q5e: 'lancement',
+  q6: 'unity',
   q7: 'faux',
-  q9: 'B',
+  q9: 'planning',
   q10a: 'B',
   q10b: 'D',
   q10c: 'C',
   q10d: 'A',
-  q11: 'B',
+  q11: 'difficulte',
   q12: 'vrai',
   q14a: 'Atari 2600',
   q14b: 'NES',
   q14c: 'PlayStation',
   q14d: 'Nintendo Switch',
-  q15: 'B',
+  q15: 'diff/sauvegarde',
   q16: 'faux',
   q18a: 'D',
   q18b: 'C',
   q18c: 'A',
   q18d: 'B',
-  q19: 'B'
+  q19: 'bugs'
 };
 
 // Questions ouvertes à corriger automatiquement par mots-clés
@@ -186,7 +184,7 @@ function initDragAndDrop() {
   const draggableItems = document.querySelectorAll('.draggable-item');
   const dropZones = document.querySelectorAll('.drop-zone');
 
-  // Initialiser les éléments glissables
+  // Initialise les éléments glissables
   draggableItems.forEach(item => {
     item.setAttribute('draggable', 'true');
 
@@ -204,7 +202,7 @@ function initDragAndDrop() {
     });
   });
 
-  // Initialiser les zones de dépôt
+  // Initialise les zones de dépôt
   dropZones.forEach(zone => {
     zone.addEventListener('dragenter', function(e) {
       e.preventDefault();
@@ -212,7 +210,7 @@ function initDragAndDrop() {
     });
 
     zone.addEventListener('dragover', function(e) {
-      e.preventDefault(); // Nécessaire pour permettre le drop
+      e.preventDefault(); // C'est nécessaire pour permettre le drop
       e.dataTransfer.dropEffect = 'move';
     });
 
@@ -224,30 +222,30 @@ function initDragAndDrop() {
       e.preventDefault();
       this.classList.remove('drag-hover');
 
-      // Récupérer le texte de l'élément glissé
+      // Récupére le texte de l'élément glissé
       const data = e.dataTransfer.getData('text/plain');
 
-      // Vider la zone de dépôt actuelle
+      // Vide la zone de dépôt actuelle
       while (this.firstChild) {
         this.removeChild(this.firstChild);
       }
 
-      // Créer un nouvel élément pour la zone de dépôt
+      // Crée un nouvel élément pour la zone de dépôt
       const newItem = document.createElement('div');
       newItem.classList.add('draggable-item');
       newItem.textContent = data;
       newItem.setAttribute('draggable', 'true');
 
-      // Ajouter l'élément à la zone de dépôt
+      // Ajoute l'élément à la zone de dépôt
       this.appendChild(newItem);
 
-      // Mettre à jour le champ caché
+      // Met à jour le champ caché
       const inputName = this.dataset.input;
       if (inputName) {
         document.querySelector(`input[name="${inputName}"]`).value = data;
       }
 
-      // Réappliquer les événements de glisser-déposer au nouvel élément
+      // Réapplique les événements de glisser-déposer au nouvel élément
       newItem.addEventListener('dragstart', function(e) {
         this.classList.add('dragging');
         e.dataTransfer.setData('text/plain', this.textContent);
@@ -267,10 +265,8 @@ function initDragAndDrop() {
 document.addEventListener('DOMContentLoaded', function() {
   initDragAndDrop();
 
-  // Intégrer la fonctionnalité au code d'évaluation existant
   const originalValidateForm = window.validateForm || function() { return true; };
   window.validateForm = function() {
-    // Vérification supplémentaire pour les zones de drag & drop
     const dropZones = document.querySelectorAll('.drop-zone[data-input]');
     let allZonesFilled = true;
 
@@ -292,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 });
 
-// Feedback personnalisé selon la note
+// Feedback selon la note
 function generateFeedback(score, maxScore) {
   const percentage = (score / maxScore) * 100;
   let comment = '';
@@ -454,6 +450,7 @@ function UXmodifs() {
 }
 
 // Configuration des boutons Vrai/Faux
+document.addEventListener('DOMContentLoaded', setupVraiFauxButtons);
 function setupVraiFauxButtons() {
   document.querySelectorAll('.vrai-faux-group').forEach(group => {
     group.querySelectorAll('input[type="radio"]').forEach(input => {
